@@ -14,3 +14,8 @@ Model-View-Controller
 #### 
 Create a tech blog using MVC, ORM, password hashing, authentication, HTML templating, managed expectations, and friend's advice.
 #### 
+
+#### 
+Packages: 📦
+npm, dotenv, express, express-session, sequelize, connect-session-sequelize, bcrypt.
+#### 
