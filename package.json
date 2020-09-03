@@ -1,0 +1,31 @@
+{
+  "name": "tech_blog",
+  "version": "1.0.0",
+  "description": "![GitHub followers](https://img.shields.io/github/followers/nosremetnarg?label=GitHub%20Followers&logo=Github&?style=social) ![Language](https://img.shields.io/github/languages/top/nosremetnarg/eCommerce) ![Last commit](https://img.shields.io/github/last-commit/nosremetnarg/eCommerce)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nosremetnarg/tech_blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nosremetnarg/tech_blog/issues"
+  },
+  "homepage": "https://github.com/nosremetnarg/tech_blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.6",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5"
+  }
+}

@@ -17,5 +17,5 @@ Create a tech blog using MVC, ORM, password hashing, authentication, HTML templa
 
 #### 
 Packages: 📦
-npm, dotenv, express, express-session, sequelize, connect-session-sequelize, bcrypt.
+npm, dotenv, express, express-session, sequelize, connect-session-sequelize, bcrypt, mysql2, handlebars
 #### 
