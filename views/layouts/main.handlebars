@@ -11,9 +11,6 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>
-                <a href="/">Tech Blog</a>
-            </h1>
             <nav>
                 {{#if loggedIn}}
                 <a href="/dashboard">dashboard</a>
@@ -22,8 +19,12 @@
                 <a href="/login">login</a>
                 {{/if}}
             </nav>
+            
         </header>
         <main>
+            <h1>
+                <a href="/">Tech Blog</a>
+            </h1>
             {{{ body }}}
         </main>
         <footer>

@@ -18,8 +18,8 @@
   }
   
   a:hover {
-    color: #3486eb;
-  }
+    color: #3486eb; 
+  } /* hover color over the post title */
   
   button {
     background-color: #225ca3;
@@ -53,9 +53,9 @@
   }
   
   textarea {
-    min-width: 40%;
+    min-width: 100%;
     min-height: 100px;
-  }
+  } /* test area for posts*/
   
   form > div {
     margin-bottom: 2%;
@@ -72,15 +72,15 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-  }
+  } /* this is the central wrapper div for whole site */
   
   header {
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1%;
-  }
+    padding: 1% 1%;
+  } /* nav bar */
   
   header h1 {
     font-size: 1em;
