@@ -126,8 +126,11 @@ router.put('/:id', withAuth, (req, res) => {
     // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
     User.update(req.body, {
         individualHooks: true,
+        // password: req.body.password,
+
         where: {
             id: req.params.id
+            
         }
     })
         .then(dbUserData => {

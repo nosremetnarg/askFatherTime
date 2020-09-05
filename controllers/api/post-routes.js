@@ -114,9 +114,11 @@ router.put('/upvote', withAuth,  (req, res) => {
 
 //create put route
 router.put('/:id', withAuth, (req, res) => {
+    console.log(req.body.title, req.params.id);
     Post.update(
         {
-            title: req.body.title // finding the post with req.body.title and replace the title of the post
+            title: req.body.title,
+            post_url: req.body.post_url // finding the post with req.body.title and replace the title of the post
         },
         {
             where: {
@@ -126,10 +128,11 @@ router.put('/:id', withAuth, (req, res) => {
     )
         .then(dbUserData => {
             if (!dbUserData[0]) {
-                res.status(404).json({ message: 'No user found with this id' });
+                res.status(404).json({ message: 'error message' });
                 return;
             }
             res.json(dbUserData);
+            // res.redirect('/dashboard');
         })
         .catch(err => {
             console.log(err);
