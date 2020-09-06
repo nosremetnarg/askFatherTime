@@ -1,5 +1,4 @@
 
-
 <article class="post">
   <div class="title">
     <a href="/post/{{id}}">{{title}}</a>
@@ -7,8 +6,31 @@
   </div>
   <div class="meta">
     <p class="post_text">{{post_url}}</p>  
-    {{vote_count}} {{format_plural "point" vote_count}}  by {{user.username}} on {{format_date created_at}}
+    Posted by {{user.username}} on {{format_date created_at}}
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
 </article>
+
+
+{{!-- <div class="posts">
+  {{#each posts}}
+  <article class="card">
+    <div class="card-header flex-row justify-space-between">
+      <h2>
+        <a href="/post/{{id}}">{{title}}</a>
+      </h2>
+      <div>
+        Posted by {{User.username}} on {{format_date createdAt}}
+      </div>
+    </div>
+    <div class="card-body">
+      {{body}}
+    </div>
+  </article>
+  {{/each}}
+</div> --}}
+
+
+
+

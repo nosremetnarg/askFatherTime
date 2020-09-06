@@ -121,6 +121,21 @@
     margin-bottom: 2%;
     line-height: 150%;
   }
+  /* CARDS */
+.card {
+  margin: 0 0 20px 0;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+}
+.card-header {
+  color: var(--primary);
+  background-color: var(--dark);
+  padding: 1%;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+.card-body {
+  padding: 1%;
+}
   
   .post .title span {
     font-style: italic;
