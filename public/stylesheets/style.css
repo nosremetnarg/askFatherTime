@@ -1,6 +1,14 @@
 * {
     box-sizing: border-box;
   }
+  :root {
+    --primary-color: #333;
+  --secondary-color: #e6ffe6;
+    --tertiary: #788585;
+    --light-dark: #6f6866;
+    --dark: #38302e;
+    --border-radius: .3rem;
+  }
   
   body, html {
     height: 100%;
@@ -9,13 +17,14 @@
     font-family: sans-serif;
     color: #333;
   }
+ 
   
   a {
     text-decoration: none;
     color: #225ca3;
     font-weight: bold;
     transition: color .1s;
-  }
+  } /* blue text except logout color over the post title */
   
   a:hover {
     color: #3486eb; 
@@ -72,10 +81,11 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    background-color: var(--secondary-color);
   } /* this is the central wrapper div for whole site */
   
   header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,8 +94,14 @@
   
   header h1 {
     font-size: 1em;
+    
   }
-  
+
+  .websiteTitle {
+    background-color: var(--dark);
+    padding: 2%;
+  }
+
   main {
     flex: 1;
     padding: 2% 4%;
@@ -126,21 +142,25 @@
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
 }
 .card-header {
   color: var(--primary);
   background-color: var(--dark);
   padding: 1%;
+  width: 100%;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
 .card-body {
   padding: 1%;
+  color: var(--primary);
+  background-color: var(--secondary-color);
 }
   
   .post .title span {
     font-style: italic;
     font-size: 90%;
-    color: #7d7d7d;
+    color: #a00000;
   }
   
   .edit-link {

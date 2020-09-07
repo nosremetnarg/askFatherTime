@@ -1,16 +1,22 @@
-
-<article class="post">
-  <div class="title">
-    <a href="/post/{{id}}">{{title}}</a>
-    
-  </div>
-  <div class="meta">
-    <p class="post_text">{{post_url}}</p>  
-    Posted by {{user.username}} on {{format_date created_at}}
-    |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-  </div>
-</article>
+<div class="posts">
+  <article class="card">
+    <header class="container">
+      <div class="card-header">
+        <h2>
+          <a href="/post/{{id}}">{{title}}</a>
+        </h2>
+      </div>
+    </header>
+    <div class="card-body">
+      <div class="meta ">
+        <h3 class="post_text">{{post_url}}</h3>
+        Posted by {{user.username}} on {{format_date created_at}}
+        |
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+      </div>
+    </div>
+  </article>
+</div>
 
 
 {{!-- <div class="posts">
@@ -30,7 +36,3 @@
   </article>
   {{/each}}
 </div> --}}
-
-
-
-
