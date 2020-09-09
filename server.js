@@ -12,7 +12,23 @@ const server = http.createServer(app);
 const io = socketio(server);
 // Run when client connects
 io.on('connection', socket => {
-    console.log('NEW Web SOCKET connection!!!!!')
+
+    // Welcomes current user
+    socket.emit('message', 'Welcome to Ask Father Time');
+
+    //Broadcast when a user connects
+    socket.broadcast.emit('message', 'a user has joined the chat');
+
+    // Runs when client disconnects
+    socket.on('disconnect', () => {
+        io.emit('message', 'A user has left the chat');
+    })
+
+    // Listen for chatMessage
+    socket.on('chatMessage', (msg) => {
+        io.emit('message', msg);
+    });
+   
 })
 
 // This sets up HANDLEBARS.js HTML template engine
