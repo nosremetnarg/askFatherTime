@@ -1,9 +1,19 @@
 const express = require('express');
 const routes = require('./controllers/');
 const path = require('path');
+const http = require('http');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
+const socketio = require('socket.io');
 
+const app = express();
+const server = http.createServer(app);
+
+const io = socketio(server);
+// Run when client connects
+io.on('connection', socket => {
+    console.log('NEW Web SOCKET connection!!!!!')
+})
 
 // This sets up HANDLEBARS.js HTML template engine
 const exphbs = require('express-handlebars');
@@ -24,7 +34,7 @@ const sess = {
         db: sequelize
     })
 };
-const app = express();
+
 const PORT = process.env.PORT || 3001; // makes app compatible with Heroku. Runs and env port live and 3001 locally
 
 app.use(express.json());
@@ -42,7 +52,7 @@ app.use(routes);
 
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => { 
-    app.listen(PORT, () => console.log('Now listening'));
+    server.listen(PORT, () => console.log('Now listening'));
 });
 // if force was set to true it would drop and re-create all the database tables on startup
 // force true will make tables re-create in there are any association changes

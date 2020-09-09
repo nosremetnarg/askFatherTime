@@ -17,7 +17,7 @@ router.get('/login', (req, res) => {
 
 // get all posts
 router.get('/', (req, res) => {
-    console.log(req.session);
+    // console.log(req.session);
     Post.findAll({
         attributes: [
             'id',
@@ -43,7 +43,7 @@ router.get('/', (req, res) => {
     })
         .then(dbPostData => {
             // pass a single post object into the homepage template
-            console.log(dbPostData[0]);
+            // console.log(dbPostData[0]);
             const posts = dbPostData.map(post => post.get({ plain: true })); // loops over and maps each sequelize object into a serialized version of itself
 
             res.render('homepage', {
