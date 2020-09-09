@@ -17,6 +17,7 @@ async function newFormHandler(event) {
         });
 
         if (response.ok) {
+            alert("Your question was submitted, Father Time will respond soon!");
             document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
