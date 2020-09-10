@@ -117,7 +117,7 @@ router.put('/:id', withAuth, (req, res) => {
     // console.log(req.body.title, req.params.id);
     Post.update(
         {
-            title: req.body.title,
+            // title: req.body.title,
             post_url: req.body.post_url // finding the post with req.body.title and replace the title of the post
         },
         {
