@@ -1,25 +1,25 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models');
+const { Question, User, Answer } = require('../models');
 const withAuth = require('../utils/auth');
 
 
 router.get('/', withAuth, (req, res) => {
-    Post.findAll({
+    Question.findAll({
         where: {
             user_id: req.session.user_id
         },
         attributes: [
             'id',
-            'post_url',
+            'question_url',
             'title',
             'created_at',
-            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
         include: [
             {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                model: Answer,
+                attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -31,10 +31,10 @@ router.get('/', withAuth, (req, res) => {
             }
         ]
     })
-        .then(dbPostData => {
+        .then(dbQuestionData => {
             // serialize data before passing to template
-            const posts = dbPostData.map(post => post.get({ plain: true }));
-            res.render('dashboard', { posts, loggedIn: true });
+            const questions = dbQuestionData.map(question => question.get({ plain: true }));
+            res.render('dashboard', { questions, loggedIn: true });
         })
         .catch(err => {
             console.log(err);
@@ -45,21 +45,21 @@ router.get('/', withAuth, (req, res) => {
 // loggedIn set to true....only users that are logged in can get to this route
 
 router.get('/edit/:id', withAuth, (req, res) => {
-    Post.findOne({
+    Question.findOne({
         where: {
             id: req.params.id
         },
         attributes: [
             'id',
-            'post_url',
+            'question_url',
             'title',
             'created_at'
-            // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+            // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
         include: [
             {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                model: Answer,
+                attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -71,12 +71,12 @@ router.get('/edit/:id', withAuth, (req, res) => {
             }
         ]
     })
-        .then(dbPostData => {
+        .then(dbQuestionData => {
             // serialize data before passing to template
-            const post = dbPostData.get({ plain: true });
+            const question = dbQuestionData.get({ plain: true });
             // console.log("title", post.title);
             // console.log("post_url", post.post_url);
-            res.render('edit-post', { post, loggedIn: true });
+            res.render('edit-question', { question, loggedIn: true });
         })
         .catch(err => {
             console.log(err);

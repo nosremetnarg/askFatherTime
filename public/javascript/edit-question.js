@@ -1,7 +1,7 @@
 async function editFormHandler(event) {
     event.preventDefault();
 
-    const post_id = window.location.toString().split('/')[
+    const question_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
 
@@ -10,13 +10,13 @@ async function editFormHandler(event) {
     // const title = document.querySelector('input[name="post-title"]').value;
     // const post_url = document.querySelector('textarea[name="post-content"]').value;
 
-    const title = document.querySelector('input[name="post-title"]').value.trim();
-    const post_url = document.querySelector('textarea[name="post-content"]').value.trim();
-    const response = await fetch(`/api/posts/${post_id}`, {
+    const title = document.querySelector('input[name="question-title"]').value.trim();
+    const question_url = document.querySelector('textarea[name="question-content"]').value.trim();
+    const response = await fetch(`/api/questions/${question_id}`, {
         method: 'PUT',
         body: JSON.stringify({
             title,
-            post_url
+            question_url
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -30,4 +30,4 @@ async function editFormHandler(event) {
     }
 }
 
-document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
+document.querySelector('.edit-question-form').addEventListener('submit', editFormHandler);

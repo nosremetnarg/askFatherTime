@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models'); // importing modules and models
+const { Question, User, Answer } = require('../models'); // importing modules and models
 const withAuth = require('../utils/auth');
 
 
@@ -15,21 +15,21 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-// get all posts
+// get all questions
 router.get('/', (req, res) => {
     // console.log(req.session);
-    Post.findAll({
+    Question.findAll({
         attributes: [
             'id',
-            'post_url',
+            'question_url',
             'title',
             'created_at',
-            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
         include: [
             {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                model: Question,
+                attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -41,13 +41,13 @@ router.get('/', (req, res) => {
             }
         ]
     })
-        .then(dbPostData => {
-            // pass a single post object into the homepage template
-            // console.log(dbPostData[0]);
-            const posts = dbPostData.map(post => post.get({ plain: true })); // loops over and maps each sequelize object into a serialized version of itself
+        .then(dbQuestionData => {
+            // pass a single question object into the homepage template
+            // console.log(dbQuestionData[0]);
+            const questions = dbQuestionData.map(question => question.get({ plain: true })); // loops over and maps each sequelize object into a serialized version of itself
 
             res.render('homepage', {
-                posts,
+                questions,
                 loggedIn: req.session.loggedIn
             });
             // .handlebars extension is implied
@@ -59,23 +59,23 @@ router.get('/', (req, res) => {
         }); // using render instead of send or sendfile
 });
 
-// get single post
-router.get('/post/:id', (req, res) => {
-    Post.findOne({
+// get single question
+router.get('/question/:id', (req, res) => {
+    Question.findOne({
         where: {
             id: req.params.id
         },
         attributes: [
             'id',
-            'post_url',
+            'question_url',
             'title',
             'created_at',
-            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
         include: [
             {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                model: Answer,
+                attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -87,18 +87,18 @@ router.get('/post/:id', (req, res) => {
             }
         ]
     })
-        .then(dbPostData => {
-            if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
+        .then(dbQuestionData => {
+            if (!dbQuestionData) {
+                res.status(404).json({ message: 'No question found with this id' });
                 return;
             }
 
             // serialize the data. make it more simple to read
-            const post = dbPostData.get({ plain: true });
+            const question = dbQuestionData.get({ plain: true });
 
             // pass data to template and create page and checks if user is logged in
-            res.render('single-post', {
-                post,
+            res.render('single-question', {
+                question,
                 loggedIn: req.session.loggedIn
             });
 

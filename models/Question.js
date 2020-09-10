@@ -1,24 +1,24 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our Post model
-class Post extends Model {
+// create our Question model
+class Question extends Model {
     static upvote(body, models) {
         return models.Vote.create({
             user_id: body.user_id,
-            post_id: body.post_id
+            question_id: body.question_id
         }).then(() => {
-            return Post.findOne({
+            return question.findOne({
                 where: {
-                    id: body.post_id
+                    id: body.question_id
                 },
                 attributes: [
                     'id',
-                    'post_url',
+                    'question_url',
                     'title',
                     'created_at',
                     [
-                        sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
+                        sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'),
                         'vote_count'
                     ]
                 ]
@@ -26,11 +26,11 @@ class Post extends Model {
         });
     }
 }
-// create fields/columns for Post model
+// create fields/columns for Question model
 // Internally, sequelize.define calls Model.init, so both approaches are essentially equivalent.
 // takes in attributes (columns) then options freezetableNames etc..
 
-Post.init(
+Question.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -42,7 +42,7 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        post_url: {
+        question_url: {
             type: DataTypes.STRING,
             allowNull: false
             
@@ -59,9 +59,9 @@ Post.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'post'
+        modelName: 'question'
     }
 );
 
-module.exports = Post;
+module.exports = Question;
 

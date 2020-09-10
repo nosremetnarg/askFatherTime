@@ -3,11 +3,11 @@ const router = require('express').Router();
 const userRoutes = require('./user-routes'); // pulls in user
 router.use('/users', userRoutes);
 
-const postRoutes = require('./post-routes'); // pulls in post
-router.use('/posts', postRoutes)
+const questionRoutes = require('./question-routes'); // pulls in question
+router.use('/questions', questionRoutes)
 
-const commentRoutes = require('./comment-routes'); // pulls in comments
-router.use('/comments', commentRoutes);
+const answerRoutes = require('./answer-routes'); // pulls in answers
+router.use('/answers', answerRoutes);
 
 module.exports = router;
 
