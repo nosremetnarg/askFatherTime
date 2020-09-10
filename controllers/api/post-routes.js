@@ -142,7 +142,7 @@ router.put('/:id', withAuth, (req, res) => {
 
 // create delete/destroy route
 router.delete('/:id', withAuth, (req, res) => {
-    console.log("delete this post", req.body)
+    // console.log("delete this post", req.body)
     Post.destroy({
         where: {
             id: req.params.id,
