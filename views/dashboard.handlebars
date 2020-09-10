@@ -1,22 +1,22 @@
 <section>
-    <h2>Create New Post</h2>
+    <h2>Ask a Question!</h2>
 
     <form class="new-post-form">
-        <div>
+        {{!-- <div>
             <label for="post-title">Title</label>
             <input type="text" id="post-title" name="post-title" />
-        </div>
+        </div> --}}
         <div>
-            <label for="post-content">Content</label>
+            <label for="post-content">Your Question:</label>
             <textarea id="post-content" name="post-content"></textarea> 
         </div>
-        <button type="submit" class="btn">Create</button>
+        <button type="submit" class="btn">Ask Father Time</button>
     </form>
 </section>
 
 {{#if posts.length}}
 <section>
-    <h2>Your Posts</h2>
+    <h2>Your Questions</h2>
     <ol>
         {{#each posts as |post|}}
         <li>
