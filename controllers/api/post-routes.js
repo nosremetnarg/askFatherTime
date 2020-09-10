@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'post_url',
-            'title',
+            // 'title',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'post_url',
-            'title',
+            // 'title',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
@@ -82,9 +82,9 @@ router.get('/:id', (req, res) => {
 // create a post route
 router.post('/', withAuth, (req, res) => {
     // expects json info back
+    
     Post.create({
-
-        title: req.body.title,
+        // title: req.body.title,
         post_url: req.body.post_url,
         user_id: req.session.user_id
 
