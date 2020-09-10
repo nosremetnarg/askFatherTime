@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'question_url',
-            'title',
+            // 'title',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'question_url',
-            'title',
+            // 'title',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
@@ -84,7 +84,7 @@ router.post('/', withAuth, (req, res) => {
     // expects json info back
     Question.create({
 
-        title: req.body.title,
+        // title: req.body.title,
         question_url: req.body.question_url,
         user_id: req.session.user_id
 
@@ -117,7 +117,7 @@ router.put('/:id', withAuth, (req, res) => {
     // console.log(req.body.title, req.params.id);
     Question.update(
         {
-            title: req.body.title,
+            // title: req.body.title,
             question_url: req.body.question_url // finding the question with req.body.title and replace the title of the question
         },
         {

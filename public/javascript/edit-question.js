@@ -10,12 +10,12 @@ async function editFormHandler(event) {
     // const title = document.querySelector('input[name="post-title"]').value;
     // const post_url = document.querySelector('textarea[name="post-content"]').value;
 
-    const title = document.querySelector('input[name="question-title"]').value.trim();
+    // const title = document.querySelector('input[name="question-title"]').value.trim();
     const question_url = document.querySelector('textarea[name="question-content"]').value.trim();
     const response = await fetch(`/api/questions/${question_id}`, {
         method: 'PUT',
         body: JSON.stringify({
-            title,
+            // title,
             question_url
         }),
         headers: {

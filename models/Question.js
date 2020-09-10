@@ -15,7 +15,7 @@ class Question extends Model {
                 attributes: [
                     'id',
                     'question_url',
-                    'title',
+                    // 'title',
                     'created_at',
                     [
                         sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'),
@@ -38,10 +38,10 @@ Question.init(
             primaryKey: true,
             autoIncrement: true
         },
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+        // title: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
         question_url: {
             type: DataTypes.STRING,
             allowNull: false

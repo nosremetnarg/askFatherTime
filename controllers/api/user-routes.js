@@ -27,20 +27,20 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Question,
-                attributes: ['id', 'title', 'question_url', 'created_at']
+                attributes: ['id',  'question_url', 'created_at']
             },
             // include the Answer model:
             {
                 model: Answer,
                 attributes: ['id', 'answer_text', 'created_at'],
-                include: {
-                    model: Question,
-                    attributes: ['title']
-                }
+                // include: {
+                //     model: Question,
+                //     attributes: ['title']
+                // }
             },
             {
-                model: Questions,
-                attributes: ['title'],
+                // model: Question,
+                // attributes: ['title'],
                 through: Vote,
                 as: 'voted_questions'
             }
