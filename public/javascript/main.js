@@ -66,3 +66,4 @@ function outputUsers(users) {
     ${users.map(user => `<li>${user.username}</li>`).join('')}
     `;
 } // use join method b/c users are an array and turn it into a string
+
