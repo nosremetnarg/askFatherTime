@@ -9,19 +9,22 @@
     --dark: #38302e;
     --border-radius: .3rem;
   }
-  
+ main { 
+    background-color: #e6e9ff
+  }
+
   body, html {
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: #667aff;
   }
  
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: #667aff;
     font-weight: bold;
     transition: color .1s;
   } /* blue text except logout color over the question title */
@@ -31,7 +34,7 @@
   } /* hover color over the question title */
   
   button {
-    background-color: #225ca3;
+    background-color: #667aff;
     border: 0;
     padding: 1%;
     color: white;
@@ -94,12 +97,13 @@
   
   header h1 {
     font-size: 1em;
-    
+    color: #667aff
   }
 
   .websiteTitle {
-    background-color: var(--dark);
     padding: 2%;
+    text-align: center;
+    color: #667aff;
   }
 
   main {
