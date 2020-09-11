@@ -1,30 +1,30 @@
 const router = require('express').Router();
-const { Comment } = require('../../models'); //destructored Comment Object
+const { Answer } = require('../../models'); //destructored Answer Object
 const withAuth = require('../../utils/auth');
 
-// get route to find all comments
+// get route to find all answers
 router.get('/', (req, res) => {
-    Comment.findAll({
+    Answer.findAll({
 
     })
-        .then(dbCommentData => res.json(dbCommentData))
+        .then(dbAnswerData => res.json(dbAnswerData))
         .catch(err => {
             console.log(err);
             res.status(400).json(err);
         });
 });
 
-// create comment post route
+// create answer post route
 router.post('/', withAuth, (req, res) => {
     // check the session
     if (req.session) {
-        Comment.create({
-            comment_text: req.body.comment_text,
-            post_id: req.body.post_id,
+        Answer.create({
+            answer_text: req.body.answer_text,
+            question_id: req.body.question_id,
             // use the id from the session
             user_id: req.session.user_id
         })
-            .then(dbCommentData => res.json(dbCommentData))
+            .then(dbData => res.json(dbAnswerData))
             .catch(err => {
                 console.log(err);
                 res.status(400).json(err);
@@ -34,7 +34,7 @@ router.post('/', withAuth, (req, res) => {
 
 // delete route to destroy the information
 router.delete('/:id', (req, res) => {
-    Comment.destroy({
+    Answer.destroy({
         where: {
             id: req.params.id
         }

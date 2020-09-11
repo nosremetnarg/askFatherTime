@@ -18,12 +18,12 @@ Vote.init(
                 key: 'id' // id is PK for user
             }
         },
-        post_id: {
+        question_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'post',
-                key: 'id' // id is PK for posts
+                model: 'question',
+                key: 'id' // id is PK for questions
             }
         }
     },

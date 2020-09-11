@@ -1,33 +1,33 @@
-<div class="posts">
+<div class="questions">
   <article class="card">
     <header class="container">
       <div class="card-header">
         <h2>
-          <a href="/post/{{id}}">{{title}}</a>
+          <a href="/question/{{id}}">{{title}}</a>
         </h2>
       </div>
     </header>
     <div class="card-body">
       <div class="meta ">
-        <h3 class="post_text">{{post_url}}</h3>
-        Posted by {{user.username}} on {{format_date created_at}}
+        <h3 class="question_text">{{question_url}}</h3>
+        questioned by {{user.username}} on {{format_date created_at}}
         |
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        <a href="/question/{{id}}">{{answers.length}} {{format_plural "answer" answers.length}}</a>
       </div>
     </div>
   </article>
 </div>
 
 
-{{!-- <div class="posts">
-  {{#each posts}}
+{{!-- <div class="questions">
+  {{#each questions}}
   <article class="card">
     <div class="card-header flex-row justify-space-between">
       <h2>
-        <a href="/post/{{id}}">{{title}}</a>
+        <a href="/question/{{id}}">{{title}}</a>
       </h2>
       <div>
-        Posted by {{User.username}} on {{format_date createdAt}}
+        questioned by {{User.username}} on {{format_date createdAt}}
       </div>
     </div>
     <div class="card-body">
