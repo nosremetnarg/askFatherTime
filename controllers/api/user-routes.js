@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Vote, Comment } = require('../../models');  // these create the express endpoints
+const { User, Question, Vote, Answer } = require('../../models');  // these create the express endpoints
 const withAuth = require('../../utils/auth');
 
 
@@ -26,23 +26,23 @@ router.get('/:id', (req, res) => {
         // replace the existing `include` with this
         include: [
             {
-                model: Post,
-                attributes: ['id', 'title', 'post_url', 'created_at']
+                model: Question,
+                attributes: ['id',  'question_url', 'created_at']
             },
-            // include the Comment model:
+            // include the Answer model:
             {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'created_at'],
-                include: {
-                    model: Post,
-                    attributes: ['title']
-                }
+                model: Answer,
+                attributes: ['id', 'answer_text', 'created_at'],
+                // include: {
+                //     model: Question,
+                //     attributes: ['title']
+                // }
             },
             {
-                model: Post,
-                attributes: ['title'],
+                // model: Question,
+                // attributes: ['title'],
                 through: Vote,
-                as: 'voted_posts'
+                as: 'voted_questions'
             }
         ]
     })

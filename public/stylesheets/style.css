@@ -24,11 +24,11 @@
     color: #225ca3;
     font-weight: bold;
     transition: color .1s;
-  } /* blue text except logout color over the post title */
+  } /* blue text except logout color over the question title */
   
   a:hover {
     color: #3486eb; 
-  } /* hover color over the post title */
+  } /* hover color over the question title */
   
   button {
     background-color: #225ca3;
@@ -45,7 +45,7 @@
     background-color: #3486eb;
   }
   
-  .post-list {
+  .question-list {
     margin: 0;
     padding: 0;
   }
@@ -64,7 +64,7 @@
   textarea {
     min-width: 100%;
     min-height: 100px;
-  } /* test area for posts*/
+  } /* test area for questions*/
   
   form > div {
     margin-bottom: 2%;
@@ -125,15 +125,15 @@
     color: #3486eb;
   }
   
-  .delete-post-btn {
+  .delete-question-btn {
     background-color: #d41414;
   }
   
-  .delete-post-btn:hover {
+  .delete-question-btn:hover {
     background-color: #ff643d;
   }
   
-  .post {
+  .question {
     margin-bottom: 2%;
     line-height: 150%;
   }
@@ -157,7 +157,7 @@
   background-color: var(--secondary-color);
 }
   
-  .post .title span {
+  .question .title span {
     font-style: italic;
     font-size: 90%;
     color: #a00000;
@@ -177,30 +177,30 @@
     background-color: #1f9c13;
   }
   
-  .comment-form {
+  .answer-form {
     margin-bottom: 5%;
   }
   
-  .comment {
+  .answer {
     padding: 1%;
     margin-bottom: 1%;
   }
   
-  .comment:nth-child(odd) {
+  .answer:nth-child(odd) {
     background-color: #fff5eb;
   }
   
-  .comment .meta {
+  .answer .meta {
     font-size: 90%;
     margin-bottom: .5%;
     opacity: .6;
   }
   
-  .new-post-form input {
+  .new-question-form input {
     width: 300px;
   }
   
-  .edit-post-form {
+  .edit-question-form {
     margin-bottom: 5%;
   }
   
