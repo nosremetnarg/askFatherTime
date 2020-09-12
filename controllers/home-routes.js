@@ -5,6 +5,16 @@ const { Question, User, Answer } = require('../models'); // importing modules an
 const withAuth = require('../utils/auth');
 
 
+//chatroom route
+router.get('/chat', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/chat');
+        return;
+    }
+
+    res.render('chat');
+});
+
 // login route
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
@@ -27,14 +37,14 @@ router.get('/', (req, res) => {
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
         include: [
-            {
-                model: Question,
-                attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
-            },
+        //     {
+        //         model: Question,
+        //         attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
+        //         include: {
+        //             model: User,
+        //             attributes: ['username']
+        //         }
+        //     },
             {
                 model: User,
                 attributes: ['username']

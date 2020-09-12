@@ -1,11 +1,11 @@
-<ol class="question-list">
+{{!-- <ol class="question-list">
     {{#each questions as |question|}}
     
         {{> question-info question }}
     
     {{/each}}
 </ol>
-{{!-- <ol class="question-list">
+<ol class="question-list">
     <div class="questions">
         {{#each questions}}
         <article class="card">
@@ -23,9 +23,9 @@
         </article>
         {{/each}}
     </div>
-</ol> --}}
+</ol>
 
-{{!-- <div class="questions">
+<div class="questions">
   {{#each questions}}
   <article class="card">
     <div class="card-header flex-row justify-space-between">
@@ -42,3 +42,29 @@
   </article>
   {{/each}}
 </div> --}}
+
+<ol class="question-list">
+    {{#each questions as |question|}}
+    <li>
+        <article class="question">
+            {{!-- <div class="title">
+                <a href="/post/{{post.id}}" target="_blank">{{post.title}}</a>
+                <span>({{post.post_text}})</span>
+            </div> --}}
+            <div class="meta">
+                {{post.vote_count}} Like(s) by {{post.user.username}} on
+                {{format_date post.created_at}}
+                |
+                <a href="/question/{{question.id}}">{{post.answers.length}} Answer(s)</a>
+            </div>
+        </article>
+    </li>
+    <ol class="question-list">
+        {{#each questions as |question|}}
+        <li>
+            {{> question-info question }}
+        </li>
+        {{/each}}
+    </ol>
+    {{/each}}
+</ol>
