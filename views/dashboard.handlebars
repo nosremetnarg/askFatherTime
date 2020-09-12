@@ -7,16 +7,16 @@
             <input type="text" id="question-title" name="question-title" />
         </div> --}}
         <div>
-            <label for="question-content">Your Question:</label>
+            <label for="question-content subtitle is-3">Your Question:</label>
             <textarea id="question-content" name="question-content"></textarea> 
         </div>
-        <button type="submit" class="btn">Ask Father Time</button>
+        <button type="submit" class="button is-small is-fullwidth"><span class="iconic iconic-magic-wand" title="magic wand" aria-hidden="true"></span></span>Ask Father Time </button>
     </form>
 </section>
 
 {{#if questions.length}}
 <section>
-    <h2>Your Questions</h2>
+    <h2 class="subtitle is-4">Your Questions</h2>
     <ol>
         {{#each questions as |question|}}
         <li>

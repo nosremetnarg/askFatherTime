@@ -1,33 +1,37 @@
-<form class="login-form">
-    <div>
-        <label for="email-login">email:</label>
-        <input type="text" id="email-login" />
-    </div>
-    <div>
-        <label for="password-login">password:</label>
-        <input type="password" id="password-login" />
-    </div>
-    <div>
-        <button type="submit">login</button>
-    </div>
-</form>
+ <h1 class="websiteTitle">
+     <i class="fas fa-hat-wizard"></i> 
+</h1>
 
-<form class="signup-form">
-    <div>
-        <label for="username-signup">username:</label>
-        <input type="text" id="username-signup" />
-    </div>
-    <div>
-        <label for="email-signup">email:</label>
-        <input type="text" id="email-signup" />
-    </div>
-    <div>
-        <label for="password-signup">password:</label>
-        <input type="password" id="password-signup" />
-    </div>
-    <div>
-        <button type="submit">signup</button>
-    </div>
-</form>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="login-card card">
+               <div class="card-header">
+                   <h3>Ask Father Time</h3>
+                </div>
+            <div class="card-body">
+                <form class="login-form">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="email" class="form-control" id="email-login" placeholder="email">
+                    </div>
+                <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" id="password-login" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn login_btn" type="submit">login</button>
+                    </div>
+            </form>
+        </div>
+            <div class="card-footer">
+	        	    <div class="account d-flex justify-content-center links">
+	        	    	Don't have an account?<a class="sign-up" href="/sign-up">Sign Up</a>
+	        	    </div>
+	        </div>
+ 
 <script src="/javascript/login.js"></script> 
 {{!-- absolute path not relative --}}

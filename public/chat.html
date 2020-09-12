@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bungee|Notable|Roboto+Mono|Roboto+Slab&display=swap" rel="stylesheet">
     <title>Ask Father Time</title>
@@ -18,9 +19,6 @@
             <a href="index.html" class="btn"><i class="fas fa-hand-peace"></i> Leave Room</a>
             <!-- <a href="randomAdvice.html" class="btn">Get Instant Advice</a> -->
             <button id="quoteBtn" class="btn instantAdvice"><i class="fas fa-magic"></i> Get Instant Advice</button>
-            
-
-
         </header>
         <main class="chat-main">
             <div class="chat-sidebar">
@@ -35,8 +33,8 @@
         </main>
         <div class="chat-form-container">
             <form id="chat-form">
-                <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
-                <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+                <input class="input" id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+                <button class="button is-normal"><i class="fas fa-paper-plane"></i> Send</button>
             </form>
         </div>
         <div class="quoteBoxDiv">

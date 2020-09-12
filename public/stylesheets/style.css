@@ -1,213 +1,109 @@
 * {
-    box-sizing: border-box;
-  }
-  :root {
-    --primary-color: #333;
-  --secondary-color: #e6ffe6;
-    --tertiary: #788585;
-    --light-dark: #6f6866;
-    --dark: #38302e;
-    --border-radius: .3rem;
-  }
-  
-  body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    color: #333;
-  }
- 
-  
-  a {
-    text-decoration: none;
-    color: #225ca3;
-    font-weight: bold;
-    transition: color .1s;
-  } /* blue text except logout color over the question title */
-  
-  a:hover {
-    color: #3486eb; 
-  } /* hover color over the question title */
-  
-  button {
-    background-color: #225ca3;
-    border: 0;
-    padding: 1%;
-    color: white;
-    font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #3486eb;
-  }
-  
-  .question-list {
-    margin: 0;
-    padding: 0;
-  }
-  
-  textarea, input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  textarea:focus, input:focus {
-    outline: none;
-    border: 1px solid #3486eb;
-  }
-  
-  textarea {
-    min-width: 100%;
-    min-height: 100px;
-  } /* test area for questions*/
-  
-  form > div {
-    margin-bottom: 2%;
-  }
-  
-  form label {
-    display: block;
-  }
-  
-  .wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--secondary-color);
-  } /* this is the central wrapper div for whole site */
-  
-  header {
-    border-bottom: 2px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 1%;
-  } /* nav bar */
-  
-  header h1 {
-    font-size: 1em;
-    
-  }
-
-  .websiteTitle {
-    background-color: var(--dark);
-    padding: 2%;
-  }
-
-  main {
-    flex: 1;
-    padding: 2% 4%;
-  }
-  
-  .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: #225ca3;
-    font-size: 100%;
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
-  }
-  
-  .btn-no-style:hover {
-    background: none;
-    color: #3486eb;
-  }
-  
-  .delete-question-btn {
-    background-color: #d41414;
-  }
-  
-  .delete-question-btn:hover {
-    background-color: #ff643d;
-  }
-  
-  .question {
-    margin-bottom: 2%;
-    line-height: 150%;
-  }
-  /* CARDS */
-.card {
-  margin: 0 0 20px 0;
-  border: 3px solid var(--dark);
-  border-radius: var(--border-radius);
-  background-color: var(--secondary-color);
+  box-sizing: border-box;
 }
-.card-header {
-  color: var(--primary);
-  background-color: var(--dark);
-  padding: 1%;
+
+:root {
+  --primary-color: #333;
+--secondary-color: #e6ffe6;
+  --tertiary: #788585;
+  --light-dark: #6f6866;
+  --dark: #38302e;
+  --border-radius: .3rem;
+}
+
+body, html {
+  background-image: url("../img/stars.jpg");
+  background-size: cover;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: 1rem;
+  transition: color .1s;
+} /* blue text except logout color over the question title */
+
+.sign-up {
+  margin-left: 2rem;
+  /* color: #C8DEF2; */
+  font-style: bold;
+  color: black;
+  opacity: .75;
+  font-style: bold;
+}
+
+.account {
+  color: black;
+  font-style: bold;
+}
+
+a:hover {
+  color: #3486eb; 
+} /* hover color over the question title */
+
+button:hover {
+  background-color: #3486eb;
+}
+  
+
+.websiteTitle {
+  padding: 2rem;
+  text-align: center;
+  color: #C8DEF2;
+  opacity: .5;
+  font-size: 7rem;
+  margin-bottom: 2rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+
+main {
+  flex: 1;
+  padding: 2% 4%;
+  opacity: 100%
+}
+
+.login_btn, .signup_btn {
+  color: black;
+  background-color: white;
   width: 100%;
-  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  }
+  
+.login_btn:hover{
+color: black;
+background-color: rgb(102, 122, 255, 0.5);
 }
-.card-body {
-  padding: 1%;
-  color: var(--primary);
-  background-color: var(--secondary-color);
+
+  /* CARDS */
+
+.card {
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* width: 100%; */
+  background-color: rgba(195, 188, 237, 0.5) !important;
+  align-items: center;
 }
-  
-  .question .title span {
-    font-style: italic;
-    font-size: 90%;
-    color: #a00000;
-  }
-  
-  .edit-link {
-    display: block;
-    margin: -1.5% 0 2% 0;
-  }
-  
-  .upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-  }
-  
-  .upvote-btn:hover {
-    background-color: #1f9c13;
-  }
-  
-  .answer-form {
-    margin-bottom: 5%;
-  }
-  
-  .answer {
-    padding: 1%;
-    margin-bottom: 1%;
-  }
-  
-  .answer:nth-child(odd) {
-    background-color: #fff5eb;
-  }
-  
-  .answer .meta {
-    font-size: 90%;
-    margin-bottom: .5%;
-    opacity: .6;
-  }
-  
-  .new-question-form input {
-    width: 300px;
-  }
-  
-  .edit-question-form {
-    margin-bottom: 5%;
-  }
-  
-  footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
-  }
+
+.login-card {
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(195, 188, 237, 0.5) !important;
+}
+
+.card-header h3 {
+  color: black;
+  opacity: .75;
+  font-style: bold;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+
+ 
