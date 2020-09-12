@@ -9,8 +9,10 @@
     --dark: #38302e;
     --border-radius: .3rem;
   }
- main { 
-    background-color: #e6e9ff
+ 
+  main { 
+  background-image: url("../img/stars.jpg");
+  background-size: cover;
   }
 
   body, html {
@@ -20,11 +22,10 @@
     font-family: sans-serif;
     color: #667aff;
   }
- 
   
   a {
     text-decoration: none;
-    color: #667aff;
+    color: black;
     font-weight: bold;
     transition: color .1s;
   } /* blue text except logout color over the question title */
@@ -87,13 +88,15 @@
     background-color: var(--secondary-color);
   } /* this is the central wrapper div for whole site */
   
-  header {
+  /* header {
     border-bottom: 2px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 1%;
-  } /* nav bar */
+    padding: 2rem;
+  }  */
+  
+  /* nav bar */
   
   header h1 {
     font-size: 1em;
@@ -103,7 +106,7 @@
   .websiteTitle {
     padding: 2%;
     text-align: center;
-    color: #667aff;
+    color: black;
   }
 
   main {
@@ -128,6 +131,17 @@
     background: none;
     color: #3486eb;
   }
+
+  .login_btn{
+    color: black;
+    background-color: white;
+    width: 100%;
+    }
+    
+    .login_btn:hover{
+    color: black;
+    background-color: rgb(102, 122, 255, 0.5);
+    }
   
   .delete-question-btn {
     background-color: #d41414;
@@ -142,23 +156,30 @@
     line-height: 150%;
   }
   /* CARDS */
+
 .card {
-  margin: 0 0 20px 0;
-  border: 3px solid var(--dark);
-  border-radius: var(--border-radius);
-  background-color: var(--secondary-color);
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(195, 188, 237, 0.5) !important;
 }
-.card-header {
-  color: var(--primary);
-  background-color: var(--dark);
-  padding: 1%;
-  width: 100%;
-  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+
+.login-card {
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(195, 188, 237, 0.5) !important;
 }
+
+.card-header h3 {
+  color: white;
+  text-align: center
+}
+
 .card-body {
   padding: 1%;
-  color: var(--primary);
-  background-color: var(--secondary-color);
 }
   
   .question .title span {
@@ -215,3 +236,5 @@
     padding: 1%;
     font-size: 110%;
   }
+
+  

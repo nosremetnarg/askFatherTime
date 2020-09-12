@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Ask Father Time</title>
 </head>
@@ -14,7 +15,7 @@
     <div class="chat-container">
         <header class="chat-header">
             <h1><i class="fas fa-hat-wizard"></i> Ask Father Time</h1>
-            <a href="index.html" class="btn">Leave Room</a>
+            <a href="index.html" class="button is-small is-rounded">Leave Room</a>
         </header>
         <main class="chat-main">
             <div class="chat-sidebar">
@@ -29,8 +30,8 @@
         </main>
         <div class="chat-form-container">
             <form id="chat-form">
-                <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
-                <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+                <input class="input" id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+                <button class="button is-normal"><i class="fas fa-paper-plane"></i> Send</button>
             </form>
         </div>
     </div>

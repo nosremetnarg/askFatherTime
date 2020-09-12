@@ -17,8 +17,11 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
 	margin: 20px;
+}
+
+.join-header {
+	color: #fff
 }
 
 ul {
@@ -29,14 +32,14 @@ a {
 	text-decoration: none;
 }
 
-.btn {
+/* .btn {
 	cursor: pointer;
 	padding: 5px 15px;
 	background: var(--light-color);
 	color: var(--dark-color-a);
 	border: 0;
 	font-size: 17px;
-}
+} */
 
 /* Chat Page */
 
@@ -126,6 +129,10 @@ a {
 	flex: 1;
 }
 
+.input {
+	margin-right: 1rem
+}
+
 /* Join Page */
 .join-container {
 	max-width: 500px;
@@ -160,23 +167,23 @@ a {
 }
 
 .join-main input[type='text'] {
-	font-size: 16px;
+	font-size: .75rem;
 	padding: 5px;
 	height: 40px;
 	width: 100%;
 }
 
 .join-main select {
-	font-size: 16px;
+	font-size: .75rem;
 	padding: 5px;
 	height: 40px;
 	width: 100%;
 }
-
+/* 
 .join-main .btn {
 	margin-top: 20px;
 	width: 100%;
-}
+} */
 
 @media (max-width: 700px) {
 	.chat-main {
