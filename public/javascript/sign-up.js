@@ -19,6 +19,7 @@ async function signupFormHandler(event) {
         // check the response status
         if (response.ok) { // .ok adds error handling
             console.log('success');
+            document.location.replace('/login');
         } else {
             alert(response.statusText);
         }
