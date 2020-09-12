@@ -12,7 +12,7 @@
 }
 
 body, html {
-  background-image: url("../img/stars.jpg");
+  background-image: url("../img/main.jpg");
   background-size: cover;
   height: 100%;
   padding: 0;
@@ -26,11 +26,10 @@ a {
   font-weight: bold;
   margin-right: 1rem;
   transition: color .1s;
-} /* blue text except logout color over the question title */
+}
 
 .sign-up {
   margin-left: 2rem;
-  /* color: #C8DEF2; */
   font-style: bold;
   color: black;
   opacity: .75;
@@ -44,23 +43,21 @@ a {
 
 a:hover {
   color: #3486eb; 
-} /* hover color over the question title */
+} 
 
 button:hover {
   background-color: #3486eb;
 }
   
-
 .websiteTitle {
   padding: 2rem;
   text-align: center;
   color: #C8DEF2;
-  opacity: .5;
+  opacity: .2;
   font-size: 7rem;
   margin-bottom: 2rem;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
-
 
 main {
   flex: 1;
@@ -72,7 +69,8 @@ main {
   color: black;
   background-color: white;
   width: 100%;
-  }
+  opacity: .7;
+}
   
 .login_btn:hover{
 color: black;
@@ -85,9 +83,8 @@ background-color: rgb(102, 122, 255, 0.5);
   height: 370px;
   margin-top: auto;
   margin-bottom: auto;
-  /* width: 100%; */
-  background-color: rgba(195, 188, 237, 0.5) !important;
-  align-items: center;
+  width: 400px;
+  background-color: rgb(200, 222, 242, .2) !important;
 }
 
 .login-card {
@@ -95,7 +92,7 @@ background-color: rgb(102, 122, 255, 0.5);
   margin-top: auto;
   margin-bottom: auto;
   width: 400px;
-  background-color: rgba(195, 188, 237, 0.5) !important;
+  background-color: rgb(200, 222, 242, .2) !important;
 }
 
 .card-header h3 {
