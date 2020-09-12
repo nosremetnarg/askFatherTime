@@ -12,7 +12,7 @@ const loadButton = document.querySelector("button#quoteBtn")
 const fontTypeTwo = ["Roboto Mono", "Roboto Slab", "Abril Fatface", "Notable", "Bungee"]
 const coloursTwo = ["#FFCDD2", "#FCE4EC", "#F3E5F5", "#8C9EFF", "#90CAF9", "#80D8FF", "#80DEEA", "#B2DFDB", "#69F0AE", "#AED581", "#AED581", "#FFC400", "#BCAAA4", "#90A4AE"]
 const quotePTwo = document.querySelector("#quoteBox")
-const bgroundTwo = document.querySelector("body")
+const bgroundTwo = document.querySelector("#quoteBox")
 // =================================== advice code ==============
 
 

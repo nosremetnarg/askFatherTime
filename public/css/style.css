@@ -21,6 +21,25 @@ body {
 	margin: 20px;
 }
 
+
+#quoteBtn {
+	
+		position: relative;
+		  background: linear-gradient(-90deg, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752);
+		  background-size: 400% 100%;
+		text-transform: uppercase;
+		font-weight: 700;
+		border: none;
+		border-radius: 0.25em;
+		font-size: 13px;
+		letter-spacing: 1px;
+		padding: 8px 20px;
+		margin: 0;
+		animation: Gradient 4s ease infinite;
+		text-decoration: none;
+	  
+}
+
 ul {
 	list-style: none;
 }
@@ -34,6 +53,7 @@ a {
 	padding: 5px 15px;
 	background: var(--light-color);
 	color: var(--dark-color-a);
+	border-radius: 0.25em;
 	border: 0;
 	font-size: 17px;
 }
@@ -187,3 +207,23 @@ a {
 		display: none;
 	}
 }
+
+/* @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+
+@keyframes Gradient {
+	50% {
+		background-position: 140% 50%;
+    transform: skew(-2deg);
+	}
+}
+
