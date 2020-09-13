@@ -33,10 +33,15 @@ a {
   font-style: bold;
   color: black;
   opacity: .75;
-  font-style: bold;
 }
 
 .account {
+  color: black;
+  font-style: bold;
+}
+
+.loginaccount {
+  margin-top: 2rem;
   color: black;
   font-style: bold;
 }
