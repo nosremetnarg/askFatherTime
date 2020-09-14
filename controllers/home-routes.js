@@ -1,8 +1,7 @@
 const router = require('express').Router();
-
 const sequelize = require('../config/connection');
 const { Question, User, Answer } = require('../models'); // importing modules and models
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 
 //chatroom route
@@ -27,9 +26,6 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-// C:\Users\melan\OneDrive\Desktop\askFatherTime\public\chatroom.html
-
-
 
 // get all questions
 router.get('/', (req, res) => {
@@ -43,14 +39,14 @@ router.get('/', (req, res) => {
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
         include: [
-        //     {
-        //         model: Question,
-        //         attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
-        //         include: {
-        //             model: User,
-        //             attributes: ['username']
-        //         }
-        //     },
+            // {
+            //     model: Question,
+            //     attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
+            //     include: {
+            //         model: User,
+            //         attributes: ['username']
+            //     }
+            // },
             {
                 model: User,
                 attributes: ['username']
