@@ -10,7 +10,7 @@
     {{else}}
      <link rel="stylesheet" href="/stylesheets/style.css">
      {{/if}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -27,15 +27,19 @@
  
 <body>
     <div class="wrapper">
-        <header>
-            <nav>
-                {{#if loggedIn}}
-                <a href="/dashboard">dashboard</a> 
-                <a href="/chat">chatroom</a>
-                <a href="/">homepage</a>
-                <button id="logout" class="btn-no-style">logout</button>
+         {{#if loggedIn}}
+        <header class="header">
+             <h1 class="websiteTitle">
+                <i class="fas fa-hat-wizard"></i> 
+            </h1>
+            <nav class="nav">
+                <a class="dash" href="/dashboard">dashboard</a> 
+                <a class= "live-chat" href="/chat">live chat</a>
+                <a class="home" href="/">homepage</a>
+                <a class="logout" href="/logout">logout</a>
+                {{!-- <button class="logout" id="logout">logout</button> --}}
                 {{else}}
-                <a class="subtitle is-5" href="/login">login</a>
+                <a class="login_btn" href="/login">login</a>
                 {{/if}}
             </nav>
         </header>
@@ -53,5 +57,5 @@
     <script src="/javascript/logout.js"></script>
     {{/if}}
 </body>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+{{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> --}}
 </html>

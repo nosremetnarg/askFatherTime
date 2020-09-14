@@ -49,6 +49,10 @@
     top: 0
   } 
 
+  .hero {
+
+  }
+
   .hat {
     display: flex;
     justify-content: center;
@@ -82,7 +86,7 @@
     padding: 2% 4%;
   }
   
-  .dash, .logout, .edit-link {
+  .dash, .logout, .home, .live-chat, .edit-link {
     color: #C8DEF2;
     font-style: lighter;
     opacity: .85;
@@ -93,7 +97,7 @@
   
 .websiteTitle {
     text-align: center;
-    display: inline-block;
+    display: flex;
     color: #C8DEF2;
     opacity: .2;
     font-size: 7rem;
@@ -102,9 +106,6 @@
 
 .nav {
     display: inline-grid;
-    padding: 10px;
-    margin: 20px;
-    align-items: center;
     list-style: none;
 }
  
