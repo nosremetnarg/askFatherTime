@@ -1,8 +1,16 @@
 const router = require('express').Router();
-
 const sequelize = require('../config/connection');
 const { Question, User, Answer } = require('../models'); // importing modules and models
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
+
+//sign-up route
+router.get('/sign-up', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('sign-up');
+});
 
 
 //chatroom route
@@ -26,7 +34,8 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
+// <<<<<<< HEAD
 // signup route
 router.get('/sign-up', (req, res) => {
     if (req.session.loggedIn) {
@@ -35,11 +44,13 @@ router.get('/sign-up', (req, res) => {
     }
     res.render('sign-up');
 });
-=======
+// =======
 // C:\Users\melan\OneDrive\Desktop\askFatherTime\public\chatroom.html
 
 
->>>>>>> e2467f8fb65752350624e80a2bd1a9d0bf7a970f
+// >>>>>>> e2467f8fb65752350624e80a2bd1a9d0bf7a970f
+// =======
+// >>>>>>> 5d3ff244f2d450838d476f2659b57382fc9d3f2c
 
 // get all questions
 router.get('/', (req, res) => {
@@ -53,14 +64,14 @@ router.get('/', (req, res) => {
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
         include: [
-        //     {
-        //         model: Question,
-        //         attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
-        //         include: {
-        //             model: User,
-        //             attributes: ['username']
-        //         }
-        //     },
+            // {
+            //     model: Question,
+            //     attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
+            //     include: {
+            //         model: User,
+            //         attributes: ['username']
+            //     }
+            // },
             {
                 model: User,
                 attributes: ['username']

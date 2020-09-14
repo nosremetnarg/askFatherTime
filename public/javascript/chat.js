@@ -7,7 +7,7 @@ const API_URL_TWO = "https://api.adviceslip.com/advice";
 function get(url) { return fetch(url).then(resp => resp.json()) }
 const API_TWO = { get }
 
-const loadButton = document.querySelector("button#quoteBtn")
+const loadButton = document.querySelector("#quoteBtn")
 
 const fontTypeTwo = ["Roboto Mono", "Roboto Slab", "Abril Fatface", "Notable", "Bungee"]
 const coloursTwo = ["#FFCDD2", "#FCE4EC", "#F3E5F5", "#8C9EFF", "#90CAF9", "#80D8FF", "#80DEEA", "#B2DFDB", "#69F0AE", "#AED581", "#AED581", "#FFC400", "#BCAAA4", "#90A4AE"]
@@ -17,7 +17,7 @@ const bgroundTwo = document.querySelector("#quoteBox")
 
 
 // Get username and room from URL
-const { username, room }  = Qs.parse(location.search, {
+const { username, room } = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 })
 
@@ -25,6 +25,12 @@ const socket = io();
 
 // Join chatroom
 socket.emit('joinRoom', { username, room })
+
+// Get room and users
+socket.on('roomUsers', ({ room, users }) => {
+    outputRoomName(room);
+    outputUsers(users);
+})
 
 // Message from Server
 socket.on('message', message => {
@@ -38,7 +44,7 @@ socket.on('message', message => {
 // Message submit
 chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     // get message text
     const msg = e.target.elements.msg.value;
 
@@ -91,4 +97,5 @@ function addQuoteTwo(quote) {
     
 }
 
-loadButton.addEventListener("click", ()=> getQuotesTwo())
+loadButton.addEventListener("click", ()=> getQuotesTwo());
+
