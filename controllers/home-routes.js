@@ -7,12 +7,14 @@ const withAuth = require('../utils/auth');
 
 //chatroom route
 router.get('/chat', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/chat');
+    if (!req.session.loggedIn) {
+        res.redirect('/login');
         return;
     }
-
-    res.render('chat');
+    // res.sendFile(__dirname + "/../public/chatroom.html");
+    res.sendFile(public_folder+'/chatroom.html');
+    console.log(process.cwd());
+    
 });
 
 // login route
@@ -24,6 +26,10 @@ router.get('/login', (req, res) => {
 
     res.render('login');
 });
+
+// C:\Users\melan\OneDrive\Desktop\askFatherTime\public\chatroom.html
+
+
 
 // get all questions
 router.get('/', (req, res) => {

@@ -46,4 +46,4 @@ function outputMessage(message) {
     document.querySelector('.chat-messages').appendChild(div);
 }
 
-document.querySelector('/chat').addEventListener('chatroom', '/chat');
+document.querySelector('/chatroom.html').addEventListener('chatroom', '/chatroom.html');
