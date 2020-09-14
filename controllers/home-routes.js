@@ -3,6 +3,15 @@ const sequelize = require('../config/connection');
 const { Question, User, Answer } = require('../models'); // importing modules and models
 // const withAuth = require('../utils/auth');
 
+//sign-up route
+router.get('/sign-up', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('sign-up');
+});
+
 
 //chatroom route
 router.get('/chat', (req, res) => {
