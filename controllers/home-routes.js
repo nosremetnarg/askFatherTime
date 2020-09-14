@@ -1,9 +1,20 @@
 const router = require('express').Router();
-
 const sequelize = require('../config/connection');
 const { Question, User, Answer } = require('../models'); // importing modules and models
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
+
+//chatroom route
+router.get('/chat', (req, res) => {
+    if (!req.session.loggedIn) {
+        res.redirect('/login');
+        return;
+    }
+    // res.sendFile(__dirname + "/../public/chatroom.html");
+    res.sendFile(public_folder+'/chatroom.html');
+    console.log(process.cwd());
+    
+});
 
 // login route
 router.get('/login', (req, res) => {
@@ -14,6 +25,7 @@ router.get('/login', (req, res) => {
 
     res.render('login');
 });
+
 
 // get all questions
 router.get('/', (req, res) => {
@@ -27,14 +39,14 @@ router.get('/', (req, res) => {
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE question.id = vote.question_id)'), 'vote_count']
         ],
         include: [
-            {
-                model: Question,
-                attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
-            },
+            // {
+            //     model: Question,
+            //     attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
+            //     include: {
+            //         model: User,
+            //         attributes: ['username']
+            //     }
+            // },
             {
                 model: User,
                 attributes: ['username']

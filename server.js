@@ -13,6 +13,9 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+var publicFolder = __dirname + '/public/';
+public_folder = publicFolder;
+
 
 
 
