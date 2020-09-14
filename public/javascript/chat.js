@@ -7,7 +7,7 @@ const API_URL_TWO = "https://api.adviceslip.com/advice";
 function get(url) { return fetch(url).then(resp => resp.json()) }
 const API_TWO = { get }
 
-const loadButton = document.querySelector("button#quoteBtn")
+const loadButton = document.querySelector("#quoteBtn")
 
 const fontTypeTwo = ["Roboto Mono", "Roboto Slab", "Abril Fatface", "Notable", "Bungee"]
 const coloursTwo = ["#FFCDD2", "#FCE4EC", "#F3E5F5", "#8C9EFF", "#90CAF9", "#80D8FF", "#80DEEA", "#B2DFDB", "#69F0AE", "#AED581", "#AED581", "#FFC400", "#BCAAA4", "#90A4AE"]
@@ -97,4 +97,5 @@ function addQuoteTwo(quote) {
     
 }
 
-loadButton.addEventListener("click", ()=> getQuotesTwo())
+loadButton.addEventListener("click", ()=> getQuotesTwo());
+

@@ -21,7 +21,7 @@ body {
 }
 
 body, html {
-	background-image: url("../img/chatstars.jpg");
+	background-image: url("../img/stars.jpg");
 	background-size: cover;
 	height: 100%;
 	padding: 0;
