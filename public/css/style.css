@@ -21,7 +21,7 @@ body {
 }
 
 body, html {
-	background-image: url("../img/stars.jpg");
+	background-image: url("../img/sparkles.jpg");
 	background-size: cover;
 	height: 100%;
 	padding: 0;
@@ -52,6 +52,10 @@ body, html {
 	  
 }
 
+.quoteBoxDiv {
+	background: rgb(200, 222, 242, .2) !important;
+}
+
 ul {
 	list-style: none;
 }
@@ -74,13 +78,13 @@ a {
 
 .chat-container {
 	max-width: 1100px;
-	background: #fff;
+	background: rgb(200, 222, 242, .2) !important;
 	margin: 30px auto;
 	overflow: hidden;
 }
 
 .chat-header {
-	background: var(--dark-color-a);
+	background: rgb(200, 222, 242, .2) !important;
 	color: #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -96,8 +100,8 @@ a {
 }
 
 .chat-sidebar {
-	background: var(--dark-color-b);
-	color: #fff;
+	background: rgb(200, 222, 242, .2) !important;
+	background: rgb(200, 222, 242, .2) !important;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 }
@@ -144,7 +148,7 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
-	background-color: var(--dark-color-a);
+	background: rgb(200, 222, 242, .2) !important;
 }
 
 .chat-form-container form {
@@ -172,18 +176,19 @@ a {
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: var(--dark-color-a);
+	background: rgb(200, 222, 242, .2) !important;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
 .join-main {
 	padding: 30px 40px;
-	background: var(--dark-color-b);
+	background: rgb(200, 222, 242, .2) !important;
 }
 
 .join-main p {
 	margin-bottom: 20px;
+	background: rgb(200, 222, 242, .2) !important;
 }
 
 .join-main .form-control {
