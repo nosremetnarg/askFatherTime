@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+  }
+  :root {
+    --primary-color: #333;
+  --secondary-color: #e6ffe6;
+    --tertiary: #788585;
+    --light-dark: #6f6866;
+    --dark: #38302e;
+    --border-radius: .3rem;
+  }
+ 
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url("../img/main.jpg");
+    background-size: cover;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 1rem;
+    transition: color .1s;
+  } /* blue text except logout color over the question title */
+
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  } /* this is the central wrapper div for whole site */
+  
+  
+  /* HEADER STYLES */
+
+  .header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    padding: 2rem;
+    /* flex-wrap: wrap; */
+    top: 0
+  } 
+
+  .hat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0
+  }
+    
+  
+  .ask {
+    text-align: center;
+    color: #C8DEF2;
+    opacity: .8;
+    font-style: lighter;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    float: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+  .question {
+    text-align: left;
+    color: #C8DEF2;
+    opacity: .8;
+    font-style: lighter;
+    font-size: 2rem;
+    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+  }
+
+  main {
+    flex: 1;
+    padding: 2% 4%;
+  }
+  
+  .dash, .logout, .edit-link {
+    color: #C8DEF2;
+    font-style: lighter;
+    opacity: .85;
+    font-size: 1.3rem;
+    float: right;
+  
+  }
+  
+.websiteTitle {
+    text-align: center;
+    display: inline-block;
+    color: #C8DEF2;
+    opacity: .2;
+    font-size: 7rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+.nav {
+    display: inline-grid;
+    padding: 10px;
+    margin: 20px;
+    align-items: center;
+    list-style: none;
+}
+ 
+a:hover {
+  color: #3486eb; 
+} /* hover color over the question title */
+
+.ask_btn {
+  color: black;
+  background-color: white;
+  width: 10%;
+  opacity: .7;
+  float: right;
+}
+
+button:hover {
+  background-color: #3486eb;
+}
+
+.question-list {
+  margin: 0;
+  padding: 0;
+}
+
+textarea, input {
+  padding: .5%;
+  border-radius: 5px;
+  opacity: .5;
+  border: 1px solid #ccc;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  border: 1px solid #C8DEF2;
+}
+
+textarea {
+  min-width: 100%;
+  min-height: 100px;
+} 
+
+form > div {
+  margin-bottom: 2%;
+}
+
+form label {
+  display: block;
+}
+
+  
+.delete-question-btn {
+  background-color: #d41414;
+}
+
+.delete-question-btn:hover {
+  background-color: #ff643d;
+}
+
+.question {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+  /* CARDS */
+
+.card {
+  height: auto;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-color: rgb(200, 222, 242, .5) !important;
+}
+
+.card-header h3 {
+  color: #C8DEF2;
+  font-style: bold;
+}
+
+.card-body {
+  padding: 1%;
+}
+  
+.question .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: #a00000;
+}
+
+.edit-link {
+  display: block;
+    margin: -1.5% 0 2% 0;
+    width: 100%;
+    margin-inline-end: auto;
+    float: right;
+    text-align: right
+}
+
+.upvote-btn { 
+  background-color: #197d0f;
+  transition: background-color .1s;
+}
+
+.upvote-btn:hover {
+  background-color: #1f9c13;
+}
+
+.answer-form {
+  margin-bottom: 5%;
+}
+
+.answer {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.answer:nth-child(odd) {
+  background-color: #fff5eb;
+}
+
+.answer .meta {
+  font-size: 90%;
+  margin-bottom: .5%;
+  opacity: .6;
+}
+
+.new-question-form input {
+  width: 300px;
+}
+
+.edit-question-form {
+  margin-bottom: 5%;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+}
+  
