@@ -36,19 +36,19 @@ body, html {
 
 #quoteBtn {
 	
-		position: relative;
-		  background: linear-gradient(-90deg, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752);
-		  background-size: 400% 100%;
-		text-transform: uppercase;
-		font-weight: 700;
-		border: none;
-		border-radius: 0.25em;
-		font-size: 13px;
-		letter-spacing: 1px;
-		padding: 8px 20px;
-		margin: 0;
-		animation: Gradient 4s ease infinite;
-		text-decoration: none;
+	position: relative;
+	background: linear-gradient(-90deg, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752);
+	background-size: 400% 100%;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	border-radius: 0.25em;
+	font-size: 13px;
+	letter-spacing: 1px;
+	padding: 8px 20px;
+	margin: 0;
+	animation: Gradient 4s ease infinite;
+	text-decoration: none;
 	  
 }
 
