@@ -27,16 +27,20 @@
  
 <body>
     <div class="wrapper">
-        <header>
-            <nav>
-                {{#if loggedIn}}
-                <a class="subtitle is-5" href="/dashboard">dashboard</a>
-                <button id="logout" class="subtitle is-5 btn-no-style">logout</button>
+        <header class="header">
+            {{#if loggedIn}}
+            <div class="hat">
+            <h1 class="websiteTitle">
+                <i class="fas fa-hat-wizard"></i> 
+            </h1>
+            </div>
+            <nav class="nav">
+                <a class="dash" href="/dashboard">dashboard</a>
+                <a id="logout" href="/logout" class="logout ">logout</a>
                 {{else}}
                 {{!-- <a class="subtitle is-5" href="/login">login</a> --}}
                 {{/if}}
             </nav>
-            
         </header>
         <main>
             {{!-- <h1 class="title is-2 websiteTitle">
