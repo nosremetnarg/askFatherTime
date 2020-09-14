@@ -103,7 +103,6 @@ background-color: rgb(102, 122, 255, 0.5);
 .card-header h3 {
   color: #C8DEF2;
   text-align: center;
-  opacity: .8;
   font-style: italic;
   font-style: bold;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
