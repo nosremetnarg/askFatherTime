@@ -52,9 +52,13 @@ body, html {
 	  
 }
 
-.quoteBoxDiv {
-	background: rgb(200, 222, 242, .2) !important;
-}
+
+.websiteTitle {
+    padding: .5rem;
+    margin-left: 4rem;
+    color: #C8DEF2;
+    font-size: 4rem;
+	}
 
 ul {
 	list-style: none;
