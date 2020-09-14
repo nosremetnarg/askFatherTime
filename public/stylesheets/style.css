@@ -61,7 +61,7 @@ button:hover {
   opacity: .2;
   font-size: 7rem;
   margin-bottom: 2rem;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
   }
 
 main {
@@ -101,10 +101,12 @@ background-color: rgb(102, 122, 255, 0.5);
 }
 
 .card-header h3 {
-  color: black;
-  opacity: .75;
+  color: #C8DEF2;
+  text-align: center;
+  opacity: .8;
+  font-style: italic;
   font-style: bold;
-  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 
