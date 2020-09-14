@@ -20,6 +20,15 @@ body {
 	margin: 20px;
 }
 
+body, html {
+	background-image: url("../img/chatstars.jpg");
+	background-size: cover;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+  }
+
 .join-header {
 	color: #fff
 
