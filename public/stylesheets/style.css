@@ -85,7 +85,7 @@ main {
 .login_btn, .signup_btn {
   color: black;
   background-color: white;
-  width: 100%;
+  width: 100%; 
   opacity: .7;
 }
   
@@ -111,6 +111,8 @@ background-color: rgb(102, 122, 255, 0.5);
   margin-bottom: auto;
   width: 400px;
   background-color: rgb(200, 222, 242, .2) !important;
+  height: 100%
+
 }
 
 .login-card {
