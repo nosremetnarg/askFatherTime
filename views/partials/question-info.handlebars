@@ -1,16 +1,15 @@
 
 <div class="questions">
   <article class="card">
-    <header class="container">
-      <div class="card-header">
+      {{!-- <div>
         <h2>
           <a href="/question/{{id}}">{{title}}</a>
         </h2>
-      </div>
-    </header>
-    <div class="card-body">
-      <div class="meta ">
-        <h3 class="question_text">{{question_url}}</h3>
+      </div> --}}
+ 
+    <div >
+      <div class="meta">
+        <h3 class="card-body question_text">{{question_url}}</h3>
         questioned by {{user.username}} on {{format_date created_at}}
         |
         <a href="/question/{{id}}">{{answers.length}} {{format_plural "answer" answers.length}}</a>
