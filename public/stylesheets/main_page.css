@@ -40,28 +40,22 @@
   /* HEADER STYLES */
 
   .header {
-    display: flex;
-    justify-content: center;
     border-bottom: 1px solid #ccc;
     align-items: center;
     padding: 2rem;
-    /* flex-wrap: wrap; */
     top: 0
   } 
-
 
   .hat {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0
+    top: 0;
   }
     
-  
   .ask {
     text-align: center;
     color: #C8DEF2;
-    opacity: .8;
     font-style: lighter;
     font-size: 3rem;
     margin-bottom: 3rem;
@@ -69,53 +63,71 @@
     text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
   }
 
-  .question {
+    
+  .yourq {
     text-align: center;
-    padding: 2rem;
     color: #C8DEF2;
-    opacity: .8;
     font-style: lighter;
     font-size: 2rem;
+    margin-bottom: 3rem;
+    float: center;
     text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
   }
 
-  main {
-    flex: 1;
-    padding: 2% 4%;
-  }
-  
-  .dash, .logout, .home, .live-chat, .edit-link {
-    color: #C8DEF2;
+  .question {
+    text-align: center;
+    font-size: .5rem;
+    padding: 2rem;
+    color: black;
+    opacity: .8;
+    background-color: rgb(200, 222, 242, .5) !important;
     font-style: lighter;
-    opacity: .85;
-    font-size: 1.3rem;
-    float: right;
+    font-size: 2rem;
   }
+
+main {
+  flex: 1;
+  padding: 2% 4%;
+}
+
+.dash, .logout, .home, .live-chat, .edit-link {
+  color: #C8DEF2;
+  /* opacity: .85; */
+  font-size: 1.3rem;
+  text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+}
 
 .edit-link {
   font-style: italic;
+  float: right;
+}
+
+.navbar .nav{
+	padding-top: 2px;
+	margin-right: -16px;
+  margin-right: 3rem;
+}
+
+.navbar-collapse {
+  display: contents;
 }
   
 .websiteTitle {
-    text-align: center;
-    display: flex;
     color: #C8DEF2;
     opacity: .2;
     font-size: 7rem;
+    margin-left: 3rem;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
 
-.nav {
-    display: inline-grid;
-    list-style: none;
-}
- 
 a:hover {
   color: #3486eb; 
 } /* hover color over the question title */
 
 .ask_btn {
   color: black;
+  padding: .2rem;
+  border-radius: .2rem;
   background-color: white;
   width: 10%;
   opacity: .7;
@@ -128,13 +140,12 @@ button:hover {
 
 .question-list {
   margin: 0;
-  padding: 0;
+  margin-bottom: 2rem;
 }
 
 .question_text {
   font-size: 1.5rem;
-  color: black;
-  font-style: lighter;
+  color:black;
   opacity: .7;
 }
 
@@ -146,7 +157,7 @@ textarea, input {
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus, input:focus { 
   outline: none;
   border: 1px solid #C8DEF2;
 }
@@ -164,60 +175,53 @@ form label {
   display: block;
 }
 
-
-.question {
-  /* margin-bottom: 2%;
-  line-height: 150%;
-  font-size: 1rem; 
-  text-align: center;
-  background-color: rgb(200, 222, 242, .9) !important;
-  border-radius: .2rem;
-  align-items: center; */
+.answer-box {
+  margin-bottom: 1rem;
 }
 
-  /* CARDS */
+/* CARDS */
 
 .card {
   height: auto;
   padding: 2rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
   background-color: rgb(200, 222, 242, .5) !important;
 }
 
 .card-header h3 {
   color: #C8DEF2;
   font-style: bold;
-  
 }
 
 .card-body {
   padding: 1%;
 }
-  
-.question .title span {
-  font-style: italic;
-  font-size: 90%;
-  color: #a00000;
+
+.card-footer {
+  width: 100%;
+  color: black;
+  font-style: bold;
+  opacity: .9;
+  /* background-color: rgb(200, 222, 242, .5) !important; */
 }
 
 .edit-link {
   display: block;
     margin: -1.5% 0 2% 0;
+    margin-top: 1rem;
     width: 100%;
     margin-inline-end: auto;
     float: right;
     text-align: right
 }
 
-.upvote-btn { 
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-}
+.addanswer {
+  color: black;
+  background-color: white;
+  width: 100%;
+  opacity: .7;
+  float: right;
+} 
 
 .answer-form {
   margin-bottom: 5%;
@@ -226,10 +230,12 @@ form label {
 .answer {
   padding: 1%;
   margin-bottom: 1%;
+  background-color: rgb(200, 222, 242, .8) !important;
+  border-radius: .2rem;
 }
 
 .answer:nth-child(odd) {
-  background-color: rgb(200, 222, 242, .8) !important;
+  background-color: rgb(249, 209, 217, .8) !important;
   border-radius: .2rem;
 }
 
@@ -237,6 +243,16 @@ form label {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
+}
+
+.answerbox {
+  margin-bottom: 1rem;
+}
+
+.questionbox {
+  background-color: rgb(200, 222, 242, .8) !important;
+  margin-bottom: 1rem;
+
 }
 
 .new-question-form input {

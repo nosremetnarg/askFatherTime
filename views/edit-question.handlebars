@@ -1,37 +1,32 @@
-<article>
-    <a href="/dashboard"> &larr; Back to dashboard</a>
-        <h2>
-            Answer Question
-        </h2>
-    <form class="edit-question-form">
-        <div>
-            <input name="question-title" type="text" value="{{question.title}}" />
-        </div>
-        
+
+    {{!-- <form class="card edit-question-form">    
          <div>
-            <textarea class="text-area" name="question-content">{{question.question_url}}</textarea>
+            <textarea class="card-body text-area" name="question-content">{{question.question_url}}</textarea>
         </div>
         <div>
             {{question.vote_count}} {{format_plural "point" question.vote_count}} by you on {{format_date question.created_at}}
             |
             <a href="/question/{{question.id}}">{{question.answers.length}} {{format_plural "answer" question.answers.length}}</a>
         </div>
-        <button class="save" type="submit">Save question</button>
-        {{!-- <button type="button" class="delete-question-btn">Delete question</button> --}}
-    </form>
-</article>
-
-<form class="answer-form">
+        <button class="card-footer save" type="submit">save question</button>
+        <button type="button" class="delete-question-btn">Delete question</button>
+    </form> --}}
+<div class="card answerbox">
+    <a class="dash" href="/dashboard"> &larr; Back to dashboard</a>
+        <h2 class="ask card-header ">
+            Answer Question
+        </h2>
+<form class="card answer-form">
     <div>
-        <textarea name="answer-body"></textarea>
+        <textarea class="card-body" name="answer-body"></textarea>
     </div>
 
     <div>
-        <button type="submit">add answer</button>
+        <button class="card-footer" type="submit">submit wisdom</button>
     </div>
 </form>
-
+</div>
 {{> answers question.answers}}
 <script src="/javascript/edit-question.js"></script>
-<script src="/javascript/delete-question.js"></script>
+{{!-- <script src="/javascript/delete-question.js"></script> --}}
 <script src="/javascript/answer.js"></script>

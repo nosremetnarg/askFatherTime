@@ -20,6 +20,18 @@ body, html {
   font-family: sans-serif;
 }
 
+.header {
+  display: flex;
+  justify-content: left;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  /* flex-wrap: wrap; */
+  top: 0
+
+} 
+
 a {
   text-decoration: none;
   color: black;
@@ -55,12 +67,12 @@ button:hover {
 }
   
 .websiteTitle {
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   color: #C8DEF2;
   opacity: .2;
   font-size: 7rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
   }
 
@@ -80,6 +92,15 @@ main {
 .login_btn:hover{
 color: black;
 background-color: rgb(102, 122, 255, 0.5);
+}
+
+.main_login_btn, .live-chat {
+    color: #C8DEF2;
+    font-style: lighter;
+    opacity: .85;
+    font-size: 1.3rem;
+    float: right;
+
 }
 
   /* CARDS */

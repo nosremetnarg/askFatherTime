@@ -1,21 +1,23 @@
-{{> question-info question }}
+<a class="dash" href="/dashboard"> &larr; return to questions</a>
 {{#if loggedIn}}
-<form class="answer-form">
+{{> question-info question }}
+{{> answers question.answers}}
+{{!-- <form class="answer-form ">
     <div>
-        <textarea name="answer-body"></textarea>
-    </div>
-
+        <textarea name="card-body answer-body"></textarea>
+    </div> --}}
+{{!-- 
     <div>
-        <button type="submit">add answer</button>
+        <button class="addanswer" type="submit">add answer</button>
         {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
     </div>
-</form>
+</form> --}}
 {{/if}}
 
-{{> answers question.answers}}
+
 
 {{#if loggedIn}}
 <script src="/javascript/answer.js"></script>
-<script src="/javascript/upvote.js"></script>
+{{!-- <script src="/javascript/upvote.js"></script> --}}
 {{/if}}
 
