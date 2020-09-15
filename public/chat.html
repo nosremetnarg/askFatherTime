@@ -16,20 +16,28 @@
 </head>
 
 <body>
-    <div class="chat-container">
+    <!-- <header class="header">
+        <h1 class="websiteTitle">
+           <i class="fas fa-hat-wizard"></i> 
+       </h1>
+       <nav class="nav">
+        <a class="dash" href="/dashboard">dashboard</a> 
+        <a class="home" href="/">homepage</a>
+    </nav> -->
+    <div class="card chat-container">
         <header class="chat-header">
-            <h1><i class="fas fa-hat-wizard"></i> Ask Father Time</h1>
-            <a href="/login" class="btn"><i class="fas fa-hand-peace"></i> Leave Room</a>
+            <a href="/login" class="btn leave"><i class="fas fa-hand-peace"></i> Leave Room</a>
+            <h1><i class="websiteTitle fas fa-hat-wizard"></i> </h1>
             <!-- <a href="randomAdvice.html" class="btn">Get Instant Advice</a> -->
             <button id="quoteBtn" class="btn instantAdvice"><i class="fas fa-magic"></i> Get Instant Advice</button>
         </header>
-        <main class="chat-main">
+        <main class="card-body chat-main">
             <div class="chat-sidebar">
 
-                <h3><i class="fas fa-comments"></i> Room Name:</h3>
+                <h3 class="roomname"><i class="fas fa-comments"></i> Room Name:</h3>
                 <h2 id="room-name"></h2>
 
-                <h3><i class="fas fa-users"></i> Users</h3>
+                <h3 class="roomname"><i class="fas fa-users"></i> Users</h3>
                 <ul id="users"></ul>
             </div>
             <div class="chat-messages"></div>
