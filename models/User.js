@@ -48,8 +48,13 @@ User.init(
           // this means the password must be at least four characters long
           len: [4]
         }
+      },
+      role: {
+        type: DataTypes.STRING,
+        allowNull: true,
       }
     },
+
     {
       hooks: {
         // set up beforeCreate lifecycle "hook" functionality

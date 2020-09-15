@@ -29,7 +29,12 @@
         {{#each questions as |question|}}
         <li>
             {{> question-info question}} 
-            <a href="/dashboard/edit/{{question.id}}" class="edit-link">answer question</a>
+            <div>
+                {{#if 'admin'}}
+                 <a href="/dashboard/edit/{{question.id}}" class="edit-link">answer question</a>
+                 {{/if}}
+            </div>
+            
         </li>
         {{/each}}
     </ol>

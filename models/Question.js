@@ -43,7 +43,7 @@ Question.init(
         //     allowNull: false
         // },
         question_url: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT('long'),
             allowNull: false
             
         },

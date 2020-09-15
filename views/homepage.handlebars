@@ -49,13 +49,17 @@
         <article class="question">
             <div>
                 <a href="/post/{{question.id}}" target="_blank"></a>
-                <span>({{question.question_url}})</span>
+                <span>{{question.question_url}}</span>
             </div>
             <div class="meta">
                 {{question.vote_count}} Like(s) by {{question.user.username}} on
                 {{format_date question.created_at}}
                 |
+              
+                <div>
                 <a href="/question/{{question.id}}">{{question.answers.length}} Answer(s)</a>
+                </div>
+                
             </div>
         </article>
     </li>
