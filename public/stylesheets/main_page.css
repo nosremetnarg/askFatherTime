@@ -74,15 +74,16 @@
     text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
   }
 
-  .question {
+  .dashquestion {
     text-align: center;
-    font-size: .5rem;
-    padding: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
     color: black;
     opacity: .8;
-    background-color: rgb(200, 222, 242, .5) !important;
+    background-color: rgb(200, 222, 242, .8) !important;
     font-style: lighter;
-    font-size: 2rem;
+    font-size: 1rem;
+    border-radius: .3rem
   }
 
 main {
