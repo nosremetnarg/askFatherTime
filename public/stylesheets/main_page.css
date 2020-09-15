@@ -165,17 +165,7 @@ form label {
 }
 
 
-.question {
-  /* margin-bottom: 2%;
-  line-height: 150%;
-  font-size: 1rem; 
-  text-align: center;
-  background-color: rgb(200, 222, 242, .9) !important;
-  border-radius: .2rem;
-  align-items: center; */
-}
-
-  /* CARDS */
+/* CARDS */
 
 .card {
   height: auto;
@@ -194,14 +184,14 @@ form label {
 .card-body {
   padding: 1%;
 }
-  
+/*   
 .question .title span {
   font-style: italic;
   font-size: 90%;
   color: #a00000;
-}
+} */
 
-.edit-link {
+.edit-link, .addanswer {
   display: block;
     margin: -1.5% 0 2% 0;
     width: 100%;
@@ -210,14 +200,13 @@ form label {
     text-align: right
 }
 
-.upvote-btn { 
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-}
+.addanswer {
+  color: black;
+  background-color: white;
+  width: 10%;
+  opacity: .7;
+  float: right;
+} 
 
 .answer-form {
   margin-bottom: 5%;
@@ -226,6 +215,8 @@ form label {
 .answer {
   padding: 1%;
   margin-bottom: 1%;
+  background-color: rgb(200, 222, 242, .8) !important;
+  border-radius: .2rem;
 }
 
 .answer:nth-child(odd) {
