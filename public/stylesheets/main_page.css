@@ -49,9 +49,6 @@
     top: 0
   } 
 
-  .hero {
-
-  }
 
   .hat {
     display: flex;
@@ -69,16 +66,17 @@
     font-size: 3rem;
     margin-bottom: 3rem;
     float: center;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
   }
 
   .question {
-    text-align: left;
+    text-align: center;
+    padding: 2rem;
     color: #C8DEF2;
     opacity: .8;
     font-style: lighter;
     font-size: 2rem;
-    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
   }
 
   main {
@@ -92,8 +90,11 @@
     opacity: .85;
     font-size: 1.3rem;
     float: right;
-  
   }
+
+.edit-link {
+  font-style: italic;
+}
   
 .websiteTitle {
     text-align: center;
@@ -130,6 +131,14 @@ button:hover {
   padding: 0;
 }
 
+.question_text {
+  font-size: 1.5rem;
+  color: black;
+  font-style: lighter;
+  opacity: .7;
+}
+
+
 textarea, input {
   padding: .5%;
   border-radius: 5px;
@@ -137,7 +146,7 @@ textarea, input {
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus, input:focus { 
   outline: none;
   border: 1px solid #C8DEF2;
 }
@@ -155,18 +164,15 @@ form label {
   display: block;
 }
 
-  
-.delete-question-btn {
-  background-color: #d41414;
-}
-
-.delete-question-btn:hover {
-  background-color: #ff643d;
-}
 
 .question {
-  margin-bottom: 2%;
+  /* margin-bottom: 2%;
   line-height: 150%;
+  font-size: 1rem; 
+  text-align: center;
+  background-color: rgb(200, 222, 242, .9) !important;
+  border-radius: .2rem;
+  align-items: center; */
 }
 
   /* CARDS */
@@ -223,7 +229,8 @@ form label {
 }
 
 .answer:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: rgb(200, 222, 242, .8) !important;
+  border-radius: .2rem;
 }
 
 .answer .meta {

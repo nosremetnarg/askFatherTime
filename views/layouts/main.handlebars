@@ -29,12 +29,15 @@
     <div class="wrapper">
          {{#if loggedIn}}
         <header class="header">
-             <h1 class="websiteTitle">
+             {{!-- <h1 class="websiteTitle">
                 <i class="fas fa-hat-wizard"></i> 
-            </h1>
+            </h1> --}}
             <nav class="nav">
                 <a class="dash" href="/dashboard">dashboard</a> 
                 <a class= "live-chat" href="/chat">live chat</a>
+                <h1 class="websiteTitle">
+                    <i class="fas fa-hat-wizard"></i> 
+                </h1>
                 <a class="home" href="/">homepage</a>
                 {{!-- <a class="logout" href="/login">login</a> --}}
                 <button class="logout" id="logout">logout</button>
