@@ -1,5 +1,6 @@
 <a class="dash" href="/dashboard"> &larr; return to questions</a>
 {{#if loggedIn}}
+
 {{> question-info question }}
 {{> answers question.answers}}
 {{!-- <form class="answer-form ">
@@ -7,12 +8,20 @@
         <textarea name="card-body answer-body"></textarea>
     </div> --}}
 {{!-- 
+
+{{#if 'admin'}}
+<form class="answer-form">
+    <div>
+        <textarea name="answer-body"></textarea>
+    </div>
     <div>
         <button class="addanswer" type="submit">add answer</button>
         {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
     </div>
+
 </form> --}}
 {{/if}}
+
 
 
 
