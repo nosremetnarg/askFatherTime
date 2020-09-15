@@ -16,7 +16,6 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
 	margin: 20px;
 }
 
@@ -52,27 +51,34 @@ body, html {
 	  
 }
 
-.quoteBoxDiv {
-	background: rgb(200, 222, 242, .2) !important;
+.roomname {
+	text-align: center;
+	color: #C8DEF2;
+	opacity: .2;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+
+.websiteTitle {
+    padding: .5rem;
+    margin-left: 4rem;
+    color: #C8DEF2;
+    font-size: 4rem;
+	}
 
 ul {
 	list-style: none;
+	text-align: center;
+	color: black;
+	opacity: .5;
+	font-size: 1.5rem;
 }
 
 a {
 	text-decoration: none;
 }
-
-/* .btn {
-	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
-	border-radius: 0.25em;
-	border: 0;
-	font-size: 17px;
-} */
 
 /* Chat Page */
 
@@ -101,14 +107,16 @@ a {
 
 .chat-sidebar {
 	background: rgb(200, 222, 242, .2) !important;
-	background: rgb(200, 222, 242, .2) !important;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 }
 
 .chat-sidebar h2 {
-	font-size: 20px;
-	background: rgba(0, 0, 0, 0.1);
+	font-size: 2rem;
+	color: black;
+	opacity: .5;
+	font-style: italic;
+	text-align: center;
 	padding: 10px;
 	margin-bottom: 20px;
 }
@@ -130,20 +138,28 @@ a {
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: var(--light-color);
+	background: rgb(200, 222, 242, .2) !important;
 	border-radius: 5px;
 }
 
 .chat-messages .message .meta {
-	font-size: 15px;
-	font-weight: bold;
+	font-size: 1.2rem;
+	font-style: italic;
 	color: var(--dark-color-b);
 	opacity: 0.7;
 	margin-bottom: 7px;
+	text-align: left;
+	font-family: "system-ui";
+}
+
+.chat-messages .message .text {
+	text-align: right;
+	font-family: "system-ui";
 }
 
 .chat-messages .message .meta span {
 	color: #777;
+
 }
 
 .chat-form-container {
@@ -167,6 +183,45 @@ a {
 }
 
 /* Join Page */
+
+
+header {
+	display: flex;
+    justify-content: center;
+    border-bottom: .5px solid #ccc;
+    align-items: center;
+    padding: 2rem;
+    /* flex-wrap: wrap; */
+    top: 0
+} 
+
+  .websiteTitle {
+	text-align: center;
+	color: #C8DEF2;
+	display: flex;
+	opacity: .3;
+	font-size: 5rem;
+	/* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+.dash, .logout, .home, .live-chat, .edit-link {
+    color: #C8DEF2;
+    font-style: lighter;
+    opacity: .85;
+	font-size: 1.3rem;
+	padding: 1rem;
+    float: right;
+}
+
+.join {
+	text-align: center;
+	font-style: italic;
+	color: #C8DEF2;
+	opacity: .5;
+	font-size: 2rem;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .join-container {
 	max-width: 500px;
 	margin: 80px auto;
