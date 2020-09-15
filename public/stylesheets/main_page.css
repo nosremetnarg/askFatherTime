@@ -152,14 +152,6 @@ form label {
   display: block;
 }
 
-  
-.delete-question-btn {
-  background-color: #d41414;
-}
-
-.delete-question-btn:hover {
-  background-color: #ff643d;
-}
 
 .question {
   margin-bottom: 2%;

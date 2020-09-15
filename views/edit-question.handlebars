@@ -16,8 +16,8 @@
             |
             <a href="/question/{{question.id}}">{{question.answers.length}} {{format_plural "answer" question.answers.length}}</a>
         </div>
-        <button type="submit">Save question</button>
-        <button type="button" class="delete-question-btn">Delete question</button>
+        <button class="save" type="submit">Save question</button>
+        {{!-- <button type="button" class="delete-question-btn">Delete question</button> --}}
     </form>
 </article>
 
