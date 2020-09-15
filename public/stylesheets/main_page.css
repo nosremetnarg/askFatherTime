@@ -40,24 +40,19 @@
   /* HEADER STYLES */
 
   .header {
-    display: flex;
-    justify-content: center;
     border-bottom: 1px solid #ccc;
     align-items: center;
     padding: 2rem;
-    /* flex-wrap: wrap; */
     top: 0
   } 
-
 
   .hat {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0
+    top: 0;
   }
     
-  
   .ask {
     text-align: center;
     color: #C8DEF2;
@@ -79,37 +74,42 @@
     text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
   }
 
-  main {
-    flex: 1;
-    padding: 2% 4%;
-  }
-  
-  .dash, .logout, .home, .live-chat, .edit-link {
-    color: #C8DEF2;
-    font-style: lighter;
-    opacity: .85;
-    font-size: 1.3rem;
-    float: right;
-  }
+main {
+  flex: 1;
+  padding: 2% 4%;
+}
+
+.dash, .logout, .home, .live-chat, .edit-link {
+  color: #C8DEF2;
+  font-style: lighter;
+  /* opacity: .85; */
+  font-size: 1.3rem;
+  text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+}
+.navbar .nav{
+	padding-top: 2px;
+	margin-right: -16px;
+  margin-right: 3rem;
+}
+
+.navbar-collapse {
+  display: contents;
+}
+
 
 .edit-link {
   font-style: italic;
 }
   
 .websiteTitle {
-    text-align: center;
-    display: flex;
     color: #C8DEF2;
     opacity: .2;
     font-size: 7rem;
+    margin-left: 3rem;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
 
-.nav {
-    display: inline-grid;
-    list-style: none;
-}
- 
+
 a:hover {
   color: #3486eb; 
 } /* hover color over the question title */
@@ -129,6 +129,8 @@ button:hover {
 .question-list {
   margin: 0;
   padding: 0;
+  background-color: white;
+  
 }
 
 .question_text {
@@ -178,7 +180,6 @@ form label {
 .card-header h3 {
   color: #C8DEF2;
   font-style: bold;
-  
 }
 
 .card-body {
