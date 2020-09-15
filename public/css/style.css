@@ -46,6 +46,7 @@ body, html {
 	letter-spacing: 1px;
 	padding: 8px 20px;
 	margin: 0;
+	margin-right: 2rem;
 	animation: Gradient 4s ease infinite;
 	text-decoration: none;
 	  
@@ -54,7 +55,7 @@ body, html {
 .roomname {
 	text-align: center;
 	color: #C8DEF2;
-	opacity: .2;
+	opacity: .4;
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -65,7 +66,8 @@ body, html {
     padding: .5rem;
     margin-left: 4rem;
     color: #C8DEF2;
-    font-size: 4rem;
+	font-size: 4rem;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
 
 ul {
@@ -138,7 +140,8 @@ a {
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background: rgb(200, 222, 242, .2) !important;
+	background: var(--light-color);
+	opacity: .8;
 	border-radius: 5px;
 }
 
@@ -211,6 +214,14 @@ header {
 	font-size: 1.3rem;
 	padding: 1rem;
     float: right;
+}
+
+.leave {
+	color: #C8DEF2;
+    font-style: lighter;
+    opacity: .85;
+	font-size: 1.3rem;
+	margin-left: 2rem
 }
 
 .join {
