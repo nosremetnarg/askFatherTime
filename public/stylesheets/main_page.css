@@ -146,7 +146,7 @@ textarea, input {
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus, input:focus { 
   outline: none;
   border: 1px solid #C8DEF2;
 }
