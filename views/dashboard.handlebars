@@ -6,12 +6,8 @@
     {{!-- <h2 class="hero">Struggling with a problem in your life? Are you in need of guidance? Submit your question to Father Time and receive the sage advice you're seeking!</h2> --}}
 
     <form class="new-question-form">
-        {{!-- <div>
-            <label for="question-title">Title</label>
-            <input type="text" id="question-title" name="question-title" />
-        </div> --}}
         <div>
-            <label class="ask ask-question" for="question-content">ask your question:</label>
+            <label class="ask ask-question" for="question-content">ask your question</label>
             <textarea id="question-content" name="question-content"></textarea> 
             <button type="submit" class="button ask_btn"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
@@ -24,11 +20,13 @@
 
 {{#if questions.length}}
 <section>
-    <h2 class="question">your questions:</h2>
-    <ol>
+    <h2 class="yourq">your questions:</h2>
+    
         {{#each questions as |question|}}
-        <li>
+        <div>
             {{> question-info question}} 
+        </div>
+
             <div>
                 {{#if 'admin'}}
                  <a href="/dashboard/edit/{{question.id}}" class="edit-link">answer question</a>
@@ -37,7 +35,7 @@
             
         </li>
         {{/each}}
-    </ol>
+    
 </section>
 {{/if}}
 <script src="/javascript/add-question.js"></script>

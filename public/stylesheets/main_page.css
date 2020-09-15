@@ -56,7 +56,6 @@
   .ask {
     text-align: center;
     color: #C8DEF2;
-    opacity: .8;
     font-style: lighter;
     font-size: 3rem;
     margin-bottom: 3rem;
@@ -64,14 +63,26 @@
     text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
   }
 
-  .question {
+    
+  .yourq {
     text-align: center;
-    padding: 2rem;
     color: #C8DEF2;
-    opacity: .8;
     font-style: lighter;
     font-size: 2rem;
+    margin-bottom: 3rem;
+    float: center;
     text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+  }
+
+  .question {
+    text-align: center;
+    font-size: .5rem;
+    padding: 2rem;
+    color: black;
+    opacity: .8;
+    background-color: rgb(200, 222, 242, .5) !important;
+    font-style: lighter;
+    font-size: 2rem;
   }
 
 main {
@@ -81,11 +92,16 @@ main {
 
 .dash, .logout, .home, .live-chat, .edit-link {
   color: #C8DEF2;
-  font-style: lighter;
   /* opacity: .85; */
   font-size: 1.3rem;
   text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
 }
+
+.edit-link {
+  font-style: italic;
+  float: right;
+}
+
 .navbar .nav{
 	padding-top: 2px;
 	margin-right: -16px;
@@ -94,11 +110,6 @@ main {
 
 .navbar-collapse {
   display: contents;
-}
-
-
-.edit-link {
-  font-style: italic;
 }
   
 .websiteTitle {
@@ -109,13 +120,14 @@ main {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
 
-
 a:hover {
   color: #3486eb; 
 } /* hover color over the question title */
 
 .ask_btn {
   color: black;
+  padding: .2rem;
+  border-radius: .2rem;
   background-color: white;
   width: 10%;
   opacity: .7;
@@ -128,15 +140,12 @@ button:hover {
 
 .question-list {
   margin: 0;
-  padding: 0;
-  background-color: white;
-  
+  margin-bottom: 2rem;
 }
 
 .question_text {
   font-size: 1.5rem;
-  color: black;
-  font-style: lighter;
+  color:black;
   opacity: .7;
 }
 
@@ -166,6 +175,9 @@ form label {
   display: block;
 }
 
+.answer-box {
+  margin-bottom: 1rem;
+}
 
 /* CARDS */
 
@@ -173,7 +185,6 @@ form label {
   height: auto;
   padding: 2rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
   background-color: rgb(200, 222, 242, .5) !important;
 }
 
@@ -185,16 +196,19 @@ form label {
 .card-body {
   padding: 1%;
 }
-/*   
-.question .title span {
-  font-style: italic;
-  font-size: 90%;
-  color: #a00000;
-} */
 
-.edit-link, .addanswer {
+.card-footer {
+  width: 100%;
+  color: black;
+  font-style: bold;
+  opacity: .9;
+  /* background-color: rgb(200, 222, 242, .5) !important; */
+}
+
+.edit-link {
   display: block;
     margin: -1.5% 0 2% 0;
+    margin-top: 1rem;
     width: 100%;
     margin-inline-end: auto;
     float: right;
@@ -204,7 +218,7 @@ form label {
 .addanswer {
   color: black;
   background-color: white;
-  width: 10%;
+  width: 100%;
   opacity: .7;
   float: right;
 } 
@@ -221,7 +235,7 @@ form label {
 }
 
 .answer:nth-child(odd) {
-  background-color: rgb(200, 222, 242, .8) !important;
+  background-color: rgb(249, 209, 217, .8) !important;
   border-radius: .2rem;
 }
 
@@ -229,6 +243,16 @@ form label {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
+}
+
+.answerbox {
+  margin-bottom: 1rem;
+}
+
+.questionbox {
+  background-color: rgb(200, 222, 242, .8) !important;
+  margin-bottom: 1rem;
+
 }
 
 .new-question-form input {

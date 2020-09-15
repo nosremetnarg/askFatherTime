@@ -1,7 +1,6 @@
 async function newFormHandler(event) {
     event.preventDefault();
 
-    // const title = document.querySelector('input[name="question-title"]').value;
     const question_url = document.querySelector('textarea[name="question-content"]').value.trim();
 
     if (question_url) {
