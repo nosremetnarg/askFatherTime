@@ -47,15 +47,15 @@
     {{#each questions as |question|}}
     <li>
         <article class="question">
-            {{!-- <div class="title">
-                <a href="/post/{{post.id}}" target="_blank">{{post.title}}</a>
-                <span>({{post.post_text}})</span>
-            </div> --}}
+            <div>
+                <a href="/post/{{question.id}}" target="_blank"></a>
+                <span>({{question.question_url}})</span>
+            </div>
             <div class="meta">
-                {{post.vote_count}} Like(s) by {{post.user.username}} on
-                {{format_date post.created_at}}
+                {{question.vote_count}} Like(s) by {{question.user.username}} on
+                {{format_date question.created_at}}
                 |
-                <a href="/question/{{question.id}}">{{post.answers.length}} Answer(s)</a>
+                <a href="/question/{{question.id}}">{{question.answers.length}} Answer(s)</a>
             </div>
         </article>
     </li>

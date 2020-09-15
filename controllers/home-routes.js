@@ -44,13 +44,7 @@ router.get('/sign-up', (req, res) => {
     }
     res.render('sign-up');
 });
-// =======
-// C:\Users\melan\OneDrive\Desktop\askFatherTime\public\chatroom.html
 
-
-// >>>>>>> e2467f8fb65752350624e80a2bd1a9d0bf7a970f
-// =======
-// >>>>>>> 5d3ff244f2d450838d476f2659b57382fc9d3f2c
 
 // get all questions
 router.get('/', (req, res) => {
@@ -82,7 +76,7 @@ router.get('/', (req, res) => {
             // pass a single question object into the homepage template
             // console.log(dbQuestionData[0]);
             const questions = dbQuestionData.map(question => question.get({ plain: true })); // loops over and maps each sequelize object into a serialized version of itself
-
+            console.log(questions);
             res.render('homepage', {
                 questions,
                 loggedIn: req.session.loggedIn
