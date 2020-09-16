@@ -78,14 +78,14 @@ router.get('/', (req, res) => {
                     // pass a single question object into the homepage template
                     // console.log(dbQuestionData[0]);
                     const questions = dbQuestionData.map(question => question.get({ plain: true })); // loops over and maps each sequelize object into a serialized version of itself
-                    const isRole = role;
+                    // const isRole = role;
                     console.log(questions);
                      console.log('result data');
                         console.log(dbResultsData);
                         console.log(dbResultsData.dataValues.role);
-                        if (role === 'admin') {
+                        if (dbResultsData.dataValues.role === '') {
                             console.log(role);
-                            console.log('is admin');
+                            // console.log('is admin');
                             res.render('homepage', {
                                 questions,
                                 loggedIn: req.session.loggedIn,
