@@ -20,7 +20,7 @@
         {{!-- <button type="button" class="delete-question-btn">Delete question</button> --}}
     </form>
 </article>
-
+{{#if admin}}
 <form class="answer-form">
     <div>
         <textarea name="answer-body"></textarea>
@@ -31,7 +31,9 @@
     </div>
 </form>
 
+{{/if}}
 {{> answers question.answers}}
+
 <script src="/javascript/edit-question.js"></script>
 <script src="/javascript/delete-question.js"></script>
 <script src="/javascript/answer.js"></script>

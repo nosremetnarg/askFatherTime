@@ -24,16 +24,25 @@
 
 {{#if questions.length}}
 <section>
+
     <h2 class="question">your questions:</h2>
     <ol>
         {{#each questions as |question|}}
+       
         <li>
             {{> question-info question}} 
-            <div>
-                {{#if 'admin'}}
-                 <a href="/dashboard/edit/{{question.id}}" class="edit-link">answer question</a>
-                 {{/if}}
+    
+
+            {{#if admin}}
+            <div>                
+                 <a href="/dashboard/edit/{{question.id}}" class="edit-link">answer question</a>               
             </div>
+            
+            {{else}}
+
+
+            {{/if}}
+
             
         </li>
         {{/each}}
@@ -41,3 +50,4 @@
 </section>
 {{/if}}
 <script src="/javascript/add-question.js"></script>
+<script src="/controllers/home-routes.js"></script>

@@ -1,6 +1,6 @@
 {{> question-info question }}
 {{#if loggedIn}}
-{{#if 'admin'}}
+{{#if admin}}
 <form class="answer-form">
     <div>
         <textarea name="answer-body"></textarea>
@@ -20,5 +20,6 @@
 {{#if loggedIn}}
 <script src="/javascript/answer.js"></script>
 <script src="/javascript/upvote.js"></script>
+
 {{/if}}
 
