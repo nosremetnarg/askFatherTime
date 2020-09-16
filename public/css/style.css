@@ -28,10 +28,35 @@ body, html {
 	font-family: sans-serif;
   }
 
-.join-header {
-	color: #fff
-
+.navbar .nav{
+	padding-top: 2px;
+	margin-right: -16px;
+  	margin-right: 3rem;
 }
+
+.navbar-collapse {
+  display: contents;
+}
+
+
+.websiteTitle {
+    color: #C8DEF2;
+    opacity: .2;
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	top: 0;
+	padding: 1rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.dash, .logout, .home, .live-chat, .edit-link {
+	color: #C8DEF2;
+	/* opacity: .85; */
+	font-size: 1.3rem;
+	text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+  }
 
 #quoteBtn {
 	
@@ -60,14 +85,6 @@ body, html {
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-
-.websiteTitle {
-    padding: .5rem;
-    margin-left: 4rem;
-    color: #C8DEF2;
-	font-size: 4rem;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-	}
 
 ul {
 	list-style: none;
@@ -190,21 +207,11 @@ a {
 header {
 	display: flex;
     justify-content: center;
-    border-bottom: .5px solid #ccc;
     align-items: center;
     padding: 2rem;
     /* flex-wrap: wrap; */
     top: 0
 } 
-
-  .websiteTitle {
-	text-align: center;
-	color: #C8DEF2;
-	display: flex;
-	opacity: .3;
-	font-size: 5rem;
-	/* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-}
 
 .dash, .logout, .home, .live-chat, .edit-link {
     color: #C8DEF2;
@@ -222,6 +229,7 @@ header {
 	font-size: 1.3rem;
 	margin-left: 2rem
 }
+
 
 .join {
 	text-align: center;
@@ -278,11 +286,7 @@ header {
 	height: 40px;
 	width: 100%;
 }
-/* 
-.join-main .btn {
-	margin-top: 20px;
-	width: 100%;
-} */
+
 
 @media (max-width: 700px) {
 	.chat-main {
