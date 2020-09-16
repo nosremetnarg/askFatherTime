@@ -8,6 +8,7 @@
      {{#if loggedIn}}
     <link rel="stylesheet" href="/stylesheets/main_page.css">
     {{else}}
+     <link rel="stylesheet" href="/stylesheets/main_page.css">
      <link rel="stylesheet" href="/stylesheets/style.css">
      {{/if}}
     {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> --}}
@@ -29,22 +30,36 @@
     <div class="wrapper">
          {{#if loggedIn}}
         <header class="header">
-             {{!-- <h1 class="websiteTitle">
-                <i class="fas fa-hat-wizard"></i> 
-            </h1> --}}
-            <nav class="nav">
-                <a class="dash" href="/dashboard">dashboard</a> 
-                <a class= "live-chat" href="/chat">live chat</a>
-                <h1 class="websiteTitle">
-                    <i class="fas fa-hat-wizard"></i> 
-                </h1>
-                <a class="home" href="/">homepage</a>
-                {{!-- <a class="logout" href="/login">login</a> --}}
-                <button class="logout" id="logout">logout</button>
+             <h1 class="websiteTitle">
+                
+            </h1>
+            <div class="container"></div>
+            <div class="navbar column">
+               <div class="navbar-header">
+                   <a class = "navbar-brand" href="/"><i class="websiteTitle fas fa-hat-wizard"></i> </a>
+			</div>
+			<div class="navbar-collapse navbar-1">
+				<ul class="nav">
+					<li>
+						<a class="dash" href="/dashboard">dashboard</a> 
+					</li>
+					<li>
+						<a class= "live-chat" href="/chat">live chat</a>
+					</li>
+					<li>
+					   <a class="home" href="/">homepage</a>
+					</li>
+					<li>
+						 <a class="logout" id="logout" href="/login">logout</a>
+					</li>
+                </ul>
+			</div>
+<!-- Navigation Block END -->
+             
+                {{!-- <button class="logout" id="logout">logout</button> --}}
                 {{else}}
-                <a class="login_btn" href="/login">login</a>
+                <a class="main_login_btn" href="/login">login</a>
                 {{/if}}
-            </nav>
         </header>
         <main>
             {{!-- <h1 class="title is-2 websiteTitle">

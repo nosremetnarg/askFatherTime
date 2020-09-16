@@ -1,52 +1,7 @@
-{{!-- <ol class="question-list">
+<div class="question-list">
     {{#each questions as |question|}}
-    
-        {{> question-info question }}
-    
-    {{/each}}
-</ol>
-<ol class="question-list">
-    <div class="questions">
-        {{#each questions}}
-        <article class="card">
-            <div class="card-header flex-row justify-space-between">
-                <h2>
-                    <a href="/question/{{id}}">{{title}}</a>
-                </h2>
-                <div>
-                    questioned by {{User.username}} on {{format_date createdAt}}
-                </div>
-            </div>
-            <div class="card-body">
-                {{body}}
-            </div>
-        </article>
-        {{/each}}
-    </div>
-</ol>
-
-<div class="questions">
-  {{#each questions}}
-  <article class="card">
-    <div class="card-header flex-row justify-space-between">
-      <h2>
-        <a href="/question/{{id}}">{{title}}</a>
-      </h2>
-      <div>
-        questioned by {{User.username}} on {{format_date createdAt}}
-      </div>
-    </div>
-    <div class="card-body">
-      {{body}}
-    </div>
-  </article>
-  {{/each}}
-</div> --}}
-
-<ol class="question-list">
-    {{#each questions as |question|}}
-    <li>
-        <article class="question">
+    <div>
+        <article class="dashquestion">
             <div>
                 <a href="/post/{{question.id}}" target="_blank"></a>
                 <span>{{question.question_url}}</span>
@@ -62,7 +17,7 @@
     
             </div>
         </article>
-    </li>
+    </div>
     <ol class="question-list">
         {{#each questions as |question|}}
         <li>
@@ -71,4 +26,4 @@
         {{/each}}
     </ol>
     {{/each}}
-</ol>
+</div>

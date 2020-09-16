@@ -1,6 +1,5 @@
-
 <div class="questions">
-  <article class="card">
+  <article class="questionbox card">
       {{!-- <div>
         <h2>
           <a href="/question/{{id}}">{{title}}</a>
@@ -10,7 +9,7 @@
     <div >
       <div class="meta">
         <h3 class="card-body question_text">{{question_url}}</h3>
-        questioned by {{user.username}} on {{format_date created_at}}
+        asked by {{user.username}} on {{format_date created_at}}
         |
         <a href="/question/{{id}}">{{answers.length}} {{format_plural "answer" answers.length}}</a>
       </div>

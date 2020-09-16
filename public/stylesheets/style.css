@@ -20,6 +20,18 @@ body, html {
   font-family: sans-serif;
 }
 
+.header {
+  display: flex;
+  justify-content: left;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  /* flex-wrap: wrap; */
+  top: 0
+
+} 
+
 a {
   text-decoration: none;
   color: black;
@@ -55,12 +67,12 @@ button:hover {
 }
   
 .websiteTitle {
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   color: #C8DEF2;
   opacity: .2;
   font-size: 7rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
   }
 
@@ -73,13 +85,22 @@ main {
 .login_btn, .signup_btn {
   color: black;
   background-color: white;
-  width: 100%;
+  width: 100%; 
   opacity: .7;
 }
   
 .login_btn:hover{
 color: black;
 background-color: rgb(102, 122, 255, 0.5);
+}
+
+.main_login_btn, .live-chat {
+    color: #C8DEF2;
+    font-style: lighter;
+    opacity: .85;
+    font-size: 1.3rem;
+    float: right;
+
 }
 
   /* CARDS */
@@ -90,6 +111,8 @@ background-color: rgb(102, 122, 255, 0.5);
   margin-bottom: auto;
   width: 400px;
   background-color: rgb(200, 222, 242, .2) !important;
+  height: 100%
+
 }
 
 .login-card {
