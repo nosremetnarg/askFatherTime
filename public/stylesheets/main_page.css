@@ -98,11 +98,6 @@ main {
   text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
 }
 
-.edit-link {
-  font-style: italic;
-  float: right;
-}
-
 .navbar .nav{
 	padding-top: 2px;
 	margin-right: -16px;
@@ -203,7 +198,6 @@ form label {
   color: black;
   font-style: bold;
   opacity: .9;
-  /* background-color: rgb(200, 222, 242, .5) !important; */
 }
 
 .edit-link {
@@ -213,7 +207,9 @@ form label {
     width: 100%;
     margin-inline-end: auto;
     float: right;
-    text-align: right
+    text-align: right;
+    font-style: italic;
+    float: right;
 }
 
 .addanswer {

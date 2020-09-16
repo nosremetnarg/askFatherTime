@@ -28,16 +28,6 @@ body, html {
 	font-family: sans-serif;
   }
 
-.navbar .nav{
-	padding-top: 2px;
-	margin-right: -16px;
-  	margin-right: 3rem;
-}
-
-.navbar-collapse {
-  display: contents;
-}
-
 
 .websiteTitle {
     color: #C8DEF2;
@@ -51,15 +41,7 @@ body, html {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.dash, .logout, .home, .live-chat, .edit-link {
-	color: #C8DEF2;
-	/* opacity: .85; */
-	font-size: 1.3rem;
-	text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
-  }
-
 #quoteBtn {
-	
 	position: relative;
 	background: linear-gradient(-90deg, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752);
 	background-size: 400% 100%;
@@ -73,8 +55,7 @@ body, html {
 	margin: 0;
 	margin-right: 2rem;
 	animation: Gradient 4s ease infinite;
-	text-decoration: none;
-	  
+	text-decoration: none;  
 }
 
 .roomname {
@@ -205,6 +186,7 @@ a {
 
 
 header {
+
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -229,7 +211,6 @@ header {
 	font-size: 1.3rem;
 	margin-left: 2rem
 }
-
 
 .join {
 	text-align: center;

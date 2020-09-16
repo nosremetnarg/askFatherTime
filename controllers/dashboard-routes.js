@@ -26,14 +26,14 @@ router.get('/', withAuth, (req, res) => {
             },
             {
                 model: User,
-                attributes: ['username']
+                attributes: ['username',]
             }
         ]
     })
         .then(dbQuestionData => {
             // serialize data before passing to template
             const questions = dbQuestionData.map(question => question.get({ plain: true }));
-            res.render('dashboard', { questions, loggedIn: true });
+            res.render('dashboard', { questions, loggedIn: true});
         })
         .catch(err => {
             console.log(err);
@@ -61,7 +61,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
                 attributes: ['id', 'answer_text', 'question_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['username',]
                 }
             },
             {
