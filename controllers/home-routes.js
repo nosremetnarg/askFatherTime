@@ -21,12 +21,13 @@ router.get('/chat', (req, res) => {
     }
     // res.sendFile(__dirname + "/../public/chatroom.html");
     res.sendFile(public_folder + '/chatroom.html');
-    console.log(process.cwd());
+    // console.log(process.cwd());
 
 });
 
 // login route
 router.get('/login', (req, res) => {
+    console.log("GOOOOOOOD ", req.params.role)
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
@@ -57,7 +58,7 @@ router.get('/', (req, res) => {
         },
     })
         .then(dbResultsData => {
-            console.log(dbResultsData);
+            // console.log(dbResultsData);
             //if user is equal to admin send to page with commenting available else send to new page we havent made yet
             Question.findAll({
                 attributes: [

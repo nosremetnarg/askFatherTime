@@ -7,9 +7,6 @@ async function editFormHandler(event) {
 
     console.log("button clicked");
 
-    // const title = document.querySelector('input[name="post-title"]').value;
-    // const post_url = document.querySelector('textarea[name="post-content"]').value;
-
     const question_url = document.querySelector('textarea[name="question-content"]').value.trim();
     const response = await fetch(`/api/questions/${question_id}`, {
         method: 'PUT',

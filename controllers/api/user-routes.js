@@ -33,14 +33,8 @@ router.get('/:id', (req, res) => {
             {
                 model: Answer,
                 attributes: ['id', 'answer_text', 'created_at'],
-                // include: {
-                //     model: Question,
-                //     attributes: ['title']
-                // }
             },
             {
-                // model: Question,
-                // attributes: ['title'],
                 through: Vote,
                 as: 'voted_questions'
             }
@@ -61,7 +55,6 @@ router.get('/:id', (req, res) => {
 
 // POST /api/users
 router.post('/',  (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
     User.create({
         username: req.body.username, // key/value pairs .... keys are defined in User.js
         email: req.body.email,
@@ -80,7 +73,6 @@ router.post('/',  (req, res) => {
 
 // login route
 router.post('/login',  (req, res) => {
-    // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
         where: {
             email: req.body.email
@@ -102,6 +94,7 @@ router.post('/login',  (req, res) => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
+            req.session.isAdmin = dbUserData.role==='admin';
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
@@ -122,11 +115,8 @@ router.post('/logout',  (req, res) => {
 
 // PUT /api/users/1
 router.put('/:id', withAuth, (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-    // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
     User.update(req.body, {
         individualHooks: true,
-        // password: req.body.password,
 
         where: {
             id: req.params.id
