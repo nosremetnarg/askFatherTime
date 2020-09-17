@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Question, User, Answer } = require('../models'); // importing modules and models
+
 // const withAuth = require('../utils/auth');
 
 //sign-up route
@@ -20,12 +21,13 @@ router.get('/chat', (req, res) => {
     }
     // res.sendFile(__dirname + "/../public/chatroom.html");
     res.sendFile(public_folder + '/chatroom.html');
-    console.log(process.cwd());
+    // console.log(process.cwd());
 
 });
 
 // login route
 router.get('/login', (req, res) => {
+    console.log("GOOOOOOOD ", req.params.role)
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
@@ -56,7 +58,7 @@ router.get('/', (req, res) => {
         },
     })
         .then(dbResultsData => {
-            console.log(dbResultsData);
+            // console.log(dbResultsData);
             //if user is equal to admin send to page with commenting available else send to new page we havent made yet
             Question.findAll({
                 attributes: [
@@ -69,7 +71,7 @@ router.get('/', (req, res) => {
                 include: [
                     {
                         model: User,
-                        attributes: ['username']
+                        attributes: ['username',]
                     }
                 ]
             })
@@ -77,21 +79,28 @@ router.get('/', (req, res) => {
                     // pass a single question object into the homepage template
                     // console.log(dbQuestionData[0]);
                     const questions = dbQuestionData.map(question => question.get({ plain: true })); // loops over and maps each sequelize object into a serialized version of itself
+                    // const isRole = role;
                     console.log(questions);
-                    if (dbResultsData.role === 'admin') {
-                        res.render('homepage', {
-                            questions,
-                            loggedIn: req.session.loggedIn,
-                            admin: true
-                        });
-                    } else {
-                        res.render('homepage', {
-                            questions,
-                            loggedIn: req.session.loggedIn,
-                            admin: false
-                        });
-
-                    }
+                     console.log('result data');
+                        console.log(dbResultsData);
+                        console.log(dbResultsData.dataValues.role);
+                        if (dbResultsData.dataValues.role === '') {
+                            console.log(role);
+                            // console.log('is admin');
+                            res.render('homepage', {
+                                questions,
+                                loggedIn: req.session.loggedIn,
+                                // role: admin,
+                                admin: true
+                            });
+                        } else {
+                            res.render('homepage', {
+                                questions,
+                                loggedIn: req.session.loggedIn,
+                                admin: false
+                            });
+    
+                        }
 
                     // .handlebars extension is implied
                     // get returns simple information
@@ -127,7 +136,7 @@ router.get('/', (req, res) => {
                 },
                 {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['username',]
                 }
             ]
         })
@@ -141,9 +150,13 @@ router.get('/', (req, res) => {
                 const question = dbQuestionData.get({ plain: true });
 
                 // pass data to template and create page and checks if user is logged in
+            
+                
+
                 res.render('single-question', {
                     question,
-                    loggedIn: req.session.loggedIn
+                    loggedIn: req.session.loggedIn,
+                   
                 });
 
             })

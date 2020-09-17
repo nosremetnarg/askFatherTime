@@ -3,11 +3,11 @@
 
 {{> question-info question }}
 {{> answers question.answers}}
-{{!-- <form class="answer-form ">
-    <div>
+<form class="answer-form ">
+    {{!-- <div>
         <textarea name="card-body answer-body"></textarea>
-    </div> --}}
-{{!-- 
+    </div>  --}}
+
 
 {{#if 'admin'}}
 <form class="answer-form">
@@ -19,11 +19,11 @@
         {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
     </div>
 
-</form> --}}
+</form>
 {{/if}}
 
 
-
+{{/if}}
 
 {{#if loggedIn}}
 <script src="/javascript/answer.js"></script>

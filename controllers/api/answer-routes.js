@@ -25,6 +25,7 @@ router.post('/', withAuth, (req, res) => {
             user_id: req.session.user_id
         })
             .then(dbAnswerData => res.json(dbAnswerData))
+            
             .catch(err => {
                 console.log(err);
                 res.status(400).json(err);

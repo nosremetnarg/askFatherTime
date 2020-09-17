@@ -28,10 +28,12 @@
         </div>
 
             <div>
-                {{#if 'admin'}}
+                {{#if isAdmin}}
                  <a href="/dashboard/edit/{{question.id}}" class="edit-link">answer question</a>
                  {{/if}}
             </div>
+                   
+
             
         </li>
         {{/each}}
@@ -39,3 +41,4 @@
 </section>
 {{/if}}
 <script src="/javascript/add-question.js"></script>
+<script src="/controllers/home-routes.js"></script>
