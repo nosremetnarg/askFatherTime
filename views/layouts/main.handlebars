@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ask Father Time</title>
-     {{#if loggedIn}}
+    {{#if loggedIn}}
     <link rel="stylesheet" href="/stylesheets/main_page.css">
     {{else}}
-     <link rel="stylesheet" href="/stylesheets/main_page.css">
-     <link rel="stylesheet" href="/stylesheets/style.css">
-     {{/if}}
+    <link rel="stylesheet" href="/stylesheets/main_page.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    {{/if}}
     {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -18,44 +18,49 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
 </head>
- 
+
 <body>
     <div class="wrapper">
-         {{#if loggedIn}}
+        {{#if loggedIn}}
         <header class="header">
-             <h1 class="websiteTitle">
-                
+            <h1 class="websiteTitle">
+
             </h1>
             <div class="container"></div>
             <div class="navbar column">
-               <div class="navbar-header">
-                   <a class = "navbar-brand" href="/"><i class="websiteTitle fas fa-hat-wizard"></i> </a>
-			</div>
-			<div class="navbar-collapse navbar-1">
-				<ul class="nav">
-					<li>
-						<a class="dash" href="/dashboard">dashboard</a> 
-					</li>
-					<li>
-						<a class= "live-chat" href="/chat">live chat</a>
-					</li>
-					<li>
-					   <a class="home" href="/">homepage</a>
-					</li>
-					<li>
-						 <a class="logout" id="logout" href="/login">logout</a>
-					</li>
-                </ul>
-			</div>
-<!-- Navigation Block END -->
-             
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"><i class="websiteTitle fas fa-hat-wizard"></i> </a>
+                </div>
+                <div class="navbar-collapse navbar-1">
+                    <ul class="nav">
+                        <li>
+                            <a class="dash" href="/dashboard">dashboard</a>
+                        </li>
+                        <li>
+                            <a class="resources" href="/resources">resources</a>
+                        </li>
+                        <li>
+                            <a class="live-chat" href="/chat">live chat</a>
+                        </li>
+                        <li>
+                            <a class="home" href="/">homepage</a>
+                        </li>
+                        <li>
+                            <a class="logout" id="logout" href="/login">logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Navigation Block END -->
+
                 {{!-- <button class="logout" id="logout">logout</button> --}}
                 {{else}}
                 {{!-- <a class="main_login_btn" href="/login">login</a> --}}
@@ -69,4 +74,5 @@
     <script src="/javascript/logout.js"></script>
     {{/if}}
 </body>
+
 </html>

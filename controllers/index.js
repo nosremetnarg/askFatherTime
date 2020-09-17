@@ -5,9 +5,13 @@ const apiRoutes = require('./api');
 const dashboardRoutes = require('./dashboard-routes.js');
 
 
+
+
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 router.use('/dashboard', dashboardRoutes);
+
+
 
 
 router.use((req, res) => { // this is incase the user requests an endpoint that doesn't exist

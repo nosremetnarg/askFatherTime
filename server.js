@@ -16,6 +16,9 @@ const io = socketio(server);
 var publicFolder = __dirname + '/public/';
 public_folder = publicFolder;
 
+var viewsFolder = __dirname + '/views/';
+views_folder = viewsFolder;
+
 
 
 

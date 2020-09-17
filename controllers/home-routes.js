@@ -4,6 +4,15 @@ const { Question, User, Answer } = require('../models'); // importing modules an
 
 // const withAuth = require('../utils/auth');
 
+//resources route
+router.get('/resources', (req, res) => {
+
+    res.render('resources');
+});
+
+
+
+
 //sign-up route
 router.get('/sign-up', (req, res) => {
     if (req.session.loggedIn) {
