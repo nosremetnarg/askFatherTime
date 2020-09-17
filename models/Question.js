@@ -26,9 +26,6 @@ class Question extends Model {
         });
     }
 }
-// create fields/columns for Question model
-// Internally, sequelize.define calls Model.init, so both approaches are essentially equivalent.
-// takes in attributes (columns) then options freezetableNames etc..
 
 Question.init(
     {
@@ -38,10 +35,6 @@ Question.init(
             primaryKey: true,
             autoIncrement: true
         },
-        // title: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false
-        // },
         question_url: {
             type: DataTypes.TEXT('long'),
             allowNull: false
