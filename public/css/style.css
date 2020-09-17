@@ -269,27 +269,62 @@ header {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+	.chat-container {
+		margin: 0;
+		width:100%;
+		height: 100%
+	}
+	.chat-header {
+		padding: 0;
+		display: grid;
+		justify-content: center;
+	}
 	.chat-main {
 		display: block;
     }
- 
 	.chat-sidebar {
 		display: none;
 	}
+	.chat-messages {
+		padding: 0;
+	}
+	.join-container {
+		height: 100%;
+	}
+	.btn {
+		justify-content: center
+	}
+	.leave {
+		display: none
+	}
 }
 
-/* @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
+
+@media (max-width: 500px) {
+	.chat-container {
+		margin: 0;
+		width:100%;
+		height: 100%
 	}
-	50% {
-		background-position: 100% 50%;
+	.chat-header {
+		padding: 0;
+		display: grid;
+		justify-content: center;
 	}
-	100% {
-		background-position: 0% 50%;
+	.leave {
+		display: none
 	}
-} */
+	.chat-messages {
+		padding: 0;
+	}
+	.join-container {
+		height: 100%;
+	}
+	.btn {
+		justify-content: center
+	}
+}
 
 @keyframes Gradient {
 	50% {
