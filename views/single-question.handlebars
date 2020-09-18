@@ -3,30 +3,26 @@
 
 {{> question-info question }}
 {{> answers question.answers}}
-<form class="card answer-form ">
-    {{!-- <div>
-        <textarea name="card-body answer-body"></textarea>
-    </div>  --}}
 
 
-{{#if 'admin'}}
-<form class="card answer-form">
-    <div>
-        <textarea class="card-body" name="answer-body"></textarea>
-    </div>
-    <div>
-        <button class="card-footer addanswer" type="submit">add answer</button>
-        {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
-    </div>
-{{/if}}
-</form>
-{{/if}}
 
 
-{{/if}}
+    {{#if admin}}
+    <form class="card answer-form">
+        <div>
+            <textarea class="card-body" name="answer-body"></textarea>
+        </div>
+        <div>
+            <button class="card-footer addanswer" type="submit">add answer</button>
+            {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+        </div>
+    </form>
+    {{/if}}
 
-{{#if loggedIn}}
-<script src="/javascript/answer.js"></script>
-{{!-- <script src="/javascript/upvote.js"></script> --}}
-{{/if}}
 
+    {{/if}}
+
+    {{#if loggedIn}}
+    <script src="/javascript/answer.js"></script>
+    {{!-- <script src="/javascript/upvote.js"></script> --}}
+    {{/if}}

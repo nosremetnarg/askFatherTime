@@ -1,5 +1,6 @@
 <div class="question-list">
     {{#each questions as |question|}}
+
     <div>
         <article class="dashquestion">
             <div>
@@ -10,12 +11,23 @@
                 {{question.vote_count}} Like(s) by {{question.user.username}} on
                 {{format_date question.created_at}}
                 |
-      
+
                 <div>
-                <a href="/question/{{question.id}}">{{question.answers.length}} Answer(s)</a>
+                    <a href="/question/{{question.id}}">{{question.answers.length}} Answer(s)</a>
                 </div>
-    
             </div>
+            {{#if ../admin}}
+            <form class="card answer-form">
+                <div>
+                    <textarea class="card-body" name="answer-body"></textarea>
+                </div>
+                <div>
+                    <button class="card-footer addanswer" type="submit">add answer</button>
+                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+                </div>
+            </form>
+ 
+            {{/if}}
         </article>
     </div>
     <ol class="question-list">
@@ -27,3 +39,5 @@
     </ol>
     {{/each}}
 </div>
+
+<script src="/javascript/answer.js"></script>

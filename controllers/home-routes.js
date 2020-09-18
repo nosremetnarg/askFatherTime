@@ -11,8 +11,6 @@ router.get('/resources', (req, res) => {
 });
 
 
-
-
 //sign-up route
 router.get('/sign-up', (req, res) => {
     if (req.session.loggedIn) {
@@ -93,8 +91,8 @@ router.get('/', (req, res) => {
                      console.log('result data');
                         console.log(dbResultsData);
                         console.log(dbResultsData.dataValues.role);
-                        if (dbResultsData.dataValues.role === '') {
-                            console.log(role);
+                        if (dbResultsData.dataValues.role === 'admin') {
+                            // console.log(role);
                             // console.log('is admin');
                             res.render('homepage', {
                                 questions,
