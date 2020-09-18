@@ -71,6 +71,27 @@ a {
   text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
 }
 
+.resourcesTitle {
+  text-align: center;
+  color: #C8DEF2;
+  font-style: lighter;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  float: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.resourcesQuote {
+  text-align: center;
+  color: #C8DEF2;
+  font-style: lighter;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  float: center;
+  font-style: italic;
+  text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+}
+
 .dashquestion {
   text-align: center;
   padding: 1rem;
@@ -88,7 +109,7 @@ main {
   padding: 2% 4%;
 }
 
-.dash, .logout, .home, .live-chat, .edit-link {
+.dash, .logout, .home, .live-chat, .edit-link, .resources {
   color: #C8DEF2;
   font-size: 1.3rem;
   text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
