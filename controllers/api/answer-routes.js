@@ -4,6 +4,7 @@ const withAuth = require('../../utils/auth');
 
 // get route to find all answers
 router.get('/', (req, res) => {
+    console.log("***************************************IS THIS WORKING?!?!?!?!?");
     Answer.findAll({
 
     })

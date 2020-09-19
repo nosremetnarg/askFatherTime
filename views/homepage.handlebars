@@ -20,11 +20,11 @@
             {{#if ../admin}}
             <form class="card answer-form" data-questionId="{{question.id}}">
                 <div>
-                    <textarea class="card-body" name="answer-body"></textarea>
+                    <textarea data-id='{{question.id}}' class="card-body" name="answer-body"></textarea>
                 </div>
                 <div>
                     <button class="card-footer addanswer" type="submit">add answer</button>
-                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+
                 </div>
             </form>
             {{/if}}
