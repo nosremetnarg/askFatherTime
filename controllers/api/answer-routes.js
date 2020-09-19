@@ -17,6 +17,7 @@ router.get('/', (req, res) => {
 // create answer post route
 router.post('/', withAuth, (req, res) => {
     // check the session
+console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" , req.body);
     if (req.session) {
         Answer.create({
             answer_text: req.body.answer_text,
@@ -25,6 +26,7 @@ router.post('/', withAuth, (req, res) => {
             user_id: req.session.user_id
         })
             .then(dbAnswerData => res.json(dbAnswerData))
+            
             
             .catch(err => {
                 console.log(err);

@@ -4,6 +4,7 @@
     <div>
         <article class="dashquestion">
             <div>
+                {{!-- steal this  --}}
                 <a href="/post/{{question.id}}" target="_blank"></a>
                 <span>{{question.question_url}}</span>
             </div>
@@ -17,7 +18,7 @@
                 </div>
             </div>
             {{#if ../admin}}
-            <form class="card answer-form">
+            <form class="card answer-form" data-questionId="{{question.id}}">
                 <div>
                     <textarea class="card-body" name="answer-body"></textarea>
                 </div>
@@ -26,7 +27,6 @@
                     {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
                 </div>
             </form>
- 
             {{/if}}
         </article>
     </div>
