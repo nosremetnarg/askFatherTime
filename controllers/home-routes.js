@@ -28,13 +28,10 @@ router.get('/chat', (req, res) => {
     }
     // res.sendFile(__dirname + "/../public/chatroom.html");
     res.sendFile(public_folder + '/chatroom.html');
-    // console.log(process.cwd());
-
 });
 
 // login route
 router.get('/login', (req, res) => {
-    console.log("GOOOOOOOD ", req.params.role)
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
@@ -55,7 +52,6 @@ router.get('/sign-up', (req, res) => {
 
 // get all questions
 router.get('/', (req, res) => {
-    // console.log(req.session);
     if (!req.session.loggedIn) {
         res.redirect('/login');
     }
@@ -65,7 +61,6 @@ router.get('/', (req, res) => {
         },
     })
         .then(dbResultsData => {
-            // console.log(dbResultsData);
             //if user is equal to admin send to page with commenting available else send to new page we havent made yet
             Question.findAll({
                 attributes: [
@@ -84,17 +79,9 @@ router.get('/', (req, res) => {
             })
                 .then(dbQuestionData => {
                     // pass a single question object into the homepage template
-                    // console.log(dbQuestionData[0]);
                     const questions = dbQuestionData.map(question => question.get({ plain: true })); // loops over and maps each sequelize object into a serialized version of itself
-                    // const isRole = role;
-                    // console.log(questions);
-                    //  console.log('result data');
-                    //     console.log(dbResultsData);
-                    //     console.log(dbResultsData.dataValues.role);
                         if (dbResultsData.dataValues.role === 'admin') {
-                            // console.log(role);
-                            // console.log('is admin');
-                            res.render('homepage', {
+                               res.render('homepage', {
                                 questions,
                                 loggedIn: req.session.loggedIn,
                                 // role: admin,

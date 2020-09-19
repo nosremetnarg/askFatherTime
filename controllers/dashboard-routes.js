@@ -33,7 +33,6 @@ router.get('/', withAuth, (req, res) => {
         .then(dbQuestionData => {
             // serialize data before passing to template
             const questions = dbQuestionData.map(question => question.get({ plain: true }));
-            console.log("===============", req.session)
             res.render('dashboard', { questions, loggedIn: true, isAdmin: req.session.isAdmin});
         })
         .catch(err => {
@@ -74,8 +73,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
         .then(dbQuestionData => {
             // serialize data before passing to template
             const question = dbQuestionData.get({ plain: true });
-            // console.log("title", post.title);
-            // console.log("post_url", post.post_url);
             res.render('edit-question', { question, loggedIn: true });
         })
         .catch(err => {

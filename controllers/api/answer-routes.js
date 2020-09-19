@@ -4,7 +4,6 @@ const withAuth = require('../../utils/auth');
 
 // get route to find all answers
 router.get('/', (req, res) => {
-    console.log("***************************************IS THIS WORKING?!?!?!?!?");
     Answer.findAll({
 
     })
@@ -18,7 +17,6 @@ router.get('/', (req, res) => {
 // create answer post route
 router.post('/', withAuth, (req, res) => {
     // check the session
-console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" , req.body);
     if (req.session) {
         Answer.create({
             answer_text: req.body.answer_text,

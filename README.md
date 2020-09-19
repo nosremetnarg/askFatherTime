@@ -25,9 +25,9 @@ npm, dotenv, express, express-session, sequelize, connect-session-sequelize, bcr
 * SQL
 
 ## Contributions
-Grant Emerson https://github.com/nosremetnarg
-Mallory Korpics https://github.com/mallynnk
-Melanie Gilman https://github.com/melaniegilman
+* Grant Emerson https://github.com/nosremetnarg
+* Mallory Korpics https://github.com/mallynnk
+* Melanie Gilman https://github.com/melaniegilman
 
 
 
