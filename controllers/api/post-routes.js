@@ -6,7 +6,6 @@ const withAuth = require('../../utils/auth');
 
 // get all posts
 router.get('/', (req, res) => {
-    console.log('===============');
     Post.findAll({
         attributes: [
             'id',
@@ -114,7 +113,6 @@ router.put('/upvote', withAuth,  (req, res) => {
 
 //create put route
 router.put('/:id', withAuth, (req, res) => {
-    // console.log(req.body.title, req.params.id);
     Post.update(
         {
             title: req.body.title,
@@ -142,7 +140,6 @@ router.put('/:id', withAuth, (req, res) => {
 
 // create delete/destroy route
 router.delete('/:id', withAuth, (req, res) => {
-    // console.log("delete this post", req.body)
     Post.destroy({
         where: {
             id: req.params.id,

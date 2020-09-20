@@ -26,6 +26,7 @@ router.post('/', withAuth, (req, res) => {
         })
             .then(dbAnswerData => res.json(dbAnswerData))
             
+            
             .catch(err => {
                 console.log(err);
                 res.status(400).json(err);

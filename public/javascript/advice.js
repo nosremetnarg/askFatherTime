@@ -20,9 +20,6 @@ function addQuote(quote) {
     let coloursNum = Math.floor(Math.random() * colours.length);
     quoteP.style.fontFamily = fontType[fontsNum];
     bground.style.backgroundColor = colours[coloursNum];
-    // let quoteBox = document.createElement('h2');
-    // quoteBox.innerText = quote;
-    
 }
 
 reloadButton.addEventListener("click", ()=> getQuotes())

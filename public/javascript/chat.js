@@ -34,7 +34,6 @@ socket.on('roomUsers', ({ room, users }) => {
 
 // Message from Server
 socket.on('message', message => {
-    console.log(message);
     outputMessage(message);
 
     // Scroll down
@@ -86,7 +85,6 @@ function getQuotesTwo() {
 }
 
 function addQuoteTwo(quote) {
-    console.log(quote)
     quotePTwo.innerText = quote;
     let fontsNum = Math.floor(Math.random() * fontTypeTwo.length);
     let coloursNum = Math.floor(Math.random() * coloursTwo.length);
@@ -94,8 +92,8 @@ function addQuoteTwo(quote) {
     bgroundTwo.style.backgroundColor = coloursTwo[coloursNum];
     // let quoteBox = document.createElement('h2');
     // quoteBox.innerText = quote;
-    
+
 }
 
-loadButton.addEventListener("click", ()=> getQuotesTwo());
+loadButton.addEventListener("click", () => getQuotesTwo());
 
