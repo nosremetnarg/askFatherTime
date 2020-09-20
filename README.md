@@ -14,8 +14,8 @@ Ask Father Time is an application for users in need of advice and or connection.
 npm, dotenv, express, express-session, sequelize, connect-session-sequelize, bcrypt, mysql2, handlebars, socket.io, nodemon, moment
 
 ## Screenshots
- ![Screenshot of ]()
- ![Screenshot of ]()
+ ![Screenshot of live chat](/public/img/livechat.png)
+ ![Screenshot of question form](/public/img/questionview.png)
 
 ## Built With
 * Javascript
@@ -23,6 +23,9 @@ npm, dotenv, express, express-session, sequelize, connect-session-sequelize, bcr
 * Handlebars
 * CSS
 * SQL
+
+## Future Development
+For this project it is easy to envision the ability for users to create profiles with personal information and a photo, and even the ability to direct message one another.  This could be great in the sense that users could communicate more freely, however the element of anonymity that the application currently has is something users may appreciate when asking for personal advice online.
 
 ## Contributions
 * Grant Emerson https://github.com/nosremetnarg
