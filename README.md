@@ -11,7 +11,7 @@
   - [Packages](#packages)
   - [Screenshot](#screenshots)
   - [Built With](#built-with)
-  - [`Future Development`](#future-development)
+  - [Future Development](#future-development)
   - [Contribution](#contribution)
 
 ## Description
